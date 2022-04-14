@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sony.mts.dao.EmployeeMapper">
+
+  <resultMap id="BaseResultMap" type="com.sony.mts.entity.Employee">
+    <id column="emp_id" jdbcType="CHAR" property="empId" />
+    <result column="dep_num" jdbcType="CHAR" property="depNum" />
+    <result column="pos_num" jdbcType="CHAR" property="posNum" />
+    <result column="emp_name" jdbcType="VARCHAR" property="empName" />
+    <result column="card_id" jdbcType="CHAR" property="cardId" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="mobile_num" jdbcType="CHAR" property="mobileNum" />
+    <result column="email_adr" jdbcType="VARCHAR" property="emailAdr" />
+    <result column="pass_wd" jdbcType="VARCHAR" property="passWd" />
+    <collection property="department" resultMap="DepartmentMap"/>
+    <collection property="position" resultMap="PositionMap"/>
+  </resultMap>
+  
+  <resultMap id="DepartmentMap" type="com.sony.mts.entity.Department">
+    <id column="dep_num" jdbcType="CHAR" property="depNum" />
+    <result column="dep_name" jdbcType="VARCHAR" property="depName" />
+    <result column="chairman_num" jdbcType="CHAR" property="chairmanNum" />
+  </resultMap>
+  
+  <resultMap id="PositionMap" type="com.sony.mts.entity.Position">
+    <id column="pos_num" jdbcType="CHAR" property="posNum" />
+    <result column="dep_num" jdbcType="CHAR" property="depNum" />
+    <result column="pos_name" jdbcType="VARCHAR" property="posName" />
+  </resultMap>
+  
+  <sql id="Base_Column_List">
+    emp_id, dep_num, pos_num, emp_name, card_id, sex, mobile_num, email_adr, pass_wd
+  </sql>
+  
+  <!-- 员工信息取得 -->
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from Employee_info
+    where emp_id = #{empId,jdbcType=CHAR}
+  </select>
+  
+  <!-- 员工信息删除 -->
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from Employee_info
+    where emp_id = #{empId,jdbcType=CHAR}
+  </delete>
+  
+  <!-- 员工信息追加 -->
+  <insert id="insert" parameterType="com.sony.mts.entity.Employee">
+    insert into Employee_info (emp_id, dep_num, pos_num, 
+      emp_name, card_id, sex, 
+      mobile_num, email_adr, pass_wd
+      )
+    values (#{empId,jdbcType=CHAR}, #{depNum,jdbcType=CHAR}, #{posNum,jdbcType=CHAR}, 
+      #{empName,jdbcType=VARCHAR}, #{cardId,jdbcType=CHAR}, #{sex,jdbcType=VARCHAR}, 
+      #{mobileNum,jdbcType=CHAR}, #{emailAdr,jdbcType=VARCHAR}, #{passWd,jdbcType=VARCHAR}
+      )
+  </insert>
+  
+  <!-- 员工信息更新 -->
+  <update id="updateByPrimaryKey" parameterType="com.sony.mts.entity.Employee">
+    update Employee_info
+    set dep_num = #{depNum,jdbcType=CHAR},
+      pos_num = #{posNum,jdbcType=CHAR},
+      emp_name = #{empName,jdbcType=VARCHAR},
+      card_id = #{cardId,jdbcType=CHAR},
+      sex = #{sex,jdbcType=VARCHAR},
+      mobile_num = #{mobileNum,jdbcType=CHAR},
+      email_adr = #{emailAdr,jdbcType=VARCHAR},
+      pass_wd = #{passWd,jdbcType=VARCHAR}
+    where emp_id = #{empId,jdbcType=CHAR}
+  </update>
+  
+  <!-- 员工信息部分更新 -->
+  <update id="updateByPrimaryKeySelective" parameterType="com.sony.mts.entity.Employee">
+    update Employee_info
+	<trim prefix="set" suffixOverrides=",">
+    	<if test="depNum != null"> dep_num = #{depNum,jdbcType=CHAR},</if>
+    	<if test="posNum != null"> pos_num = #{posNum,jdbcType=CHAR},</if>
+    	<if test="empName != null"> emp_name = #{empName,jdbcType=VARCHAR},</if>
+    	<if test="cardId != null"> card_id = #{cardId,jdbcType=CHAR},</if>
+    	<if test="sex != null"> sex = #{sex,jdbcType=VARCHAR},</if>
+    	<if test="mobileNum != null"> mobile_num = #{mobileNum,jdbcType=CHAR},</if>
+    	<if test="emailAdr != null"> email_adr = #{emailAdr,jdbcType=VARCHAR},</if>
+    	<if test="passWd != null"> pass_wd = #{passWd,jdbcType=VARCHAR},</if>
+    </trim>
+	where emp_id = #{empId,jdbcType=CHAR}
+  </update>
+  
+  <!-- 全部员工信息取得 -->
+  <select id="selectAllEmp" parameterType="com.sony.mts.entity.Employee" resultMap="BaseResultMap">
+    select    
+  <include refid="Base_Column_List" />
+    from Employee_info    
+  </select>
+  
+  <!-- 员工登录信息验证 -->
+  <select id="checkEmployee" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select * from Employee_info where emp_id=#{empId,jdbcType=CHAR} and pass_wd=#{passWd,jdbcType=VARCHAR}
+  </select>
+  
+  <!-- 通过部门编号验证是否有员工存在与此部门 -->
+  <select id="checkEmpExistDep" resultType="Employee">
+        select * from Employee_info where dep_num=#{depNum,jdbcType=CHAR}
+  </select>
+  
+  <!-- 员工模糊查询 -->
+  <select id="selectByInput" resultMap="BaseResultMap">
+        select emp.*,pos.pos_num,pos.pos_name,dept.dep_num,dept.dep_name from Employee_info as emp 
+       join Department_info as dept on (emp.dep_num=dept.dep_num)
+   	   join Position_info as pos on (emp.pos_num=pos.pos_num) 
+   	   where emp.emp_id like CONCAT('%',#{input},'%') or emp.dep_num like CONCAT('%',#{input},'%') or dept.dep_name like CONCAT('%',#{input},'%')
+   	   or pos.pos_name like CONCAT('%',#{input},'%') or emp.pos_num like CONCAT('%',#{input},'%') or emp.emp_name like CONCAT('%',#{input},'%') 
+   	   or emp.sex like CONCAT('%',#{input},'%') order by emp.pos_num
+  </select>
+  
+  <!-- 员工、部门及职位信息取得 -->
+  <select id="selectEmpDeptPos" resultMap="BaseResultMap">
+       select emp.*,pos.pos_num,pos.pos_name,dept.dep_num,dept.dep_name from Employee_info as emp 
+       join Department_info as dept on (emp.dep_num=dept.dep_num)
+   	   join Position_info as pos on (emp.pos_num=pos.pos_num) order by emp.pos_num
+  </select>
+  
+  <!-- 员工信息批量删除 -->
+  <delete id="batchDeleteEmp" parameterType="java.util.List">
+    delete from Employee_info where emp_id in
+    <foreach collection="idList" item="item" open="(" close=")" separator=",">
+      #{item}
+    </foreach>
+  </delete>
+  
+  <!-- 员工信息取得（参照键） -->
+  <select id="selectEmpByPosNum" resultType="java.lang.String">
+        select * from Employee_info where pos_num=#{posNum,jdbcType=CHAR}
+  </select>
+  
+</mapper>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sony.mts.dao.DepartmentMapper">
+
+  <resultMap id="BaseResultMap" type="com.sony.mts.entity.Department">
+    <id column="dep_num" jdbcType="CHAR" property="depNum" />
+    <result column="dep_name" jdbcType="VARCHAR" property="depName" />
+    <result column="chairman_num" jdbcType="CHAR" property="chairmanNum" />
+  </resultMap>
+  
+  <sql id="Base_Column_List">
+    dep_num, dep_name, chairman_num
+  </sql>
+  
+  <!-- 部门信息取得 -->
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from Department_info
+    where dep_num = #{depNum,jdbcType=CHAR}
+  </select>
+  
+  <!-- 部门信息删除 -->
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from Department_info
+    where dep_num = #{depNum,jdbcType=CHAR}
+  </delete>
+  
+  <!-- 部门信息追加 -->
+  <insert id="insert" parameterType="com.sony.mts.entity.Department">
+    insert into Department_info (dep_num, dep_name, chairman_num)
+    values (#{depNum,jdbcType=CHAR}, #{depName,jdbcType=VARCHAR}, #{chairmanNum,jdbcType=CHAR})
+  </insert>
+  
+  <!-- 部门信息更新 -->
+  <update id="updateByPrimaryKey" parameterType="com.sony.mts.entity.Department">
+    update Department_info
+    set dep_name = #{depName,jdbcType=VARCHAR},
+      chairman_num = #{chairmanNum,jdbcType=CHAR}
+    where dep_num = #{depNum,jdbcType=CHAR}
+  </update>
+  
+  <!-- 部门信息部分更新 -->
+  <update id="updateByPrimaryKeySelective" parameterType="com.sony.mts.entity.Department">
+    update Department_info
+    <set>
+    	<if test="depName != null"> dep_name = #{depName,jdbcType=VARCHAR},</if>
+    	<if test="chairmanNum != null"> chairman_num = #{chairmanNum,jdbcType=CHAR},</if>
+    </set>
+	where dep_num = #{depNum,jdbcType=CHAR}
+  </update>
+  
+  <!-- 所有部门信息取得 -->
+  <select id="selectAllDept" parameterType="com.sony.mts.entity.Department" resultMap="BaseResultMap">
+    select              
+  <include refid="Base_Column_List" />
+    from Department_info          
+  </select>
+  
+  <!-- 通过部门名称取得部门信息 -->
+  <select id="selectByDepName" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+  <include refid="Base_Column_List" />
+    from Department_info
+    where dep_name = #{depName,jdbcType=CHAR}
+  </select>
+  
+  <!-- 部门模糊查询 -->
+  <select id="selectDeptByInput" resultMap="BaseResultMap">
+       select * from Department_info
+   	   where dep_num like CONCAT('%',#{input},'%') or dep_name like CONCAT('%',#{input},'%') or chairman_num like CONCAT('%',#{input},'%')
+  </select>
+  
+</mapper>

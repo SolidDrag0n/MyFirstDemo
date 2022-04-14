@@ -1,0 +1,94 @@
+2021-12-22 10:14:27.638 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 3508 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-22 10:14:27.654 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-22 10:14:29.500 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 2.181 seconds (JVM running for 3.155)
+2021-12-22 10:14:37.011 DEBUG --- [nio-8080-exec-6] c.s.mts.dao.EmployeeMapper.checkEmployee : ==>  Preparing: select * from Employee_info where emp_id=? and pass_wd=? 
+2021-12-22 10:14:37.028 DEBUG --- [nio-8080-exec-6] c.s.mts.dao.EmployeeMapper.checkEmployee : ==> Parameters: admin(String), admin(String)
+2021-12-22 10:14:37.044 DEBUG --- [nio-8080-exec-6] c.s.mts.dao.EmployeeMapper.checkEmployee : <==      Total: 1
+2021-12-22 10:14:37.052 INFO  --- [nio-8080-exec-6] com.sony.mts.base.BaseController         : --------------------项目经理登入--------------------
+2021-12-22 10:14:38.957 INFO  --- [nio-8080-exec-9] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/emp/selectAllEmp
+2021-12-22 10:14:38.961 INFO  --- [nio-8080-exec-9] com.sony.mts.base.BaseController         : --------------------开始获取全部员工信息--------------------
+2021-12-22 10:14:38.986 DEBUG --- [nio-8080-exec-9] c.s.m.d.E.selectEmpDeptPos_COUNT         : ==>  Preparing: SELECT count(0) FROM Employee_info AS emp JOIN Department_info AS dept ON (emp.dep_num = dept.dep_num) JOIN Position_info AS pos ON (emp.pos_num = pos.pos_num) 
+2021-12-22 10:14:38.986 DEBUG --- [nio-8080-exec-9] c.s.m.d.E.selectEmpDeptPos_COUNT         : ==> Parameters: 
+2021-12-22 10:14:38.989 DEBUG --- [nio-8080-exec-9] c.s.m.d.E.selectEmpDeptPos_COUNT         : <==      Total: 1
+2021-12-22 10:14:38.989 DEBUG --- [nio-8080-exec-9] c.s.m.d.EmployeeMapper.selectEmpDeptPos  : ==>  Preparing: select emp.*,pos.pos_num,pos.pos_name,dept.dep_num,dept.dep_name from Employee_info as emp join Department_info as dept on (emp.dep_num=dept.dep_num) join Position_info as pos on (emp.pos_num=pos.pos_num) order by emp.pos_num LIMIT ? 
+2021-12-22 10:14:38.990 DEBUG --- [nio-8080-exec-9] c.s.m.d.EmployeeMapper.selectEmpDeptPos  : ==> Parameters: 5(Integer)
+2021-12-22 10:14:38.992 DEBUG --- [nio-8080-exec-9] c.s.m.d.EmployeeMapper.selectEmpDeptPos  : <==      Total: 5
+2021-12-22 10:14:38.995 INFO  --- [nio-8080-exec-9] com.sony.mts.base.BaseController         : --------------------全部员工信息获取成功--------------------
+2021-12-22 10:14:42.424 INFO  --- [nio-8080-exec-3] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/emp/selectAllEmp
+2021-12-22 10:14:42.425 INFO  --- [nio-8080-exec-3] com.sony.mts.base.BaseController         : --------------------开始获取全部员工信息--------------------
+2021-12-22 10:14:42.430 DEBUG --- [nio-8080-exec-3] c.s.m.d.E.selectEmpDeptPos_COUNT         : ==>  Preparing: SELECT count(0) FROM Employee_info AS emp JOIN Department_info AS dept ON (emp.dep_num = dept.dep_num) JOIN Position_info AS pos ON (emp.pos_num = pos.pos_num) 
+2021-12-22 10:14:42.431 DEBUG --- [nio-8080-exec-3] c.s.m.d.E.selectEmpDeptPos_COUNT         : ==> Parameters: 
+2021-12-22 10:14:42.433 DEBUG --- [nio-8080-exec-3] c.s.m.d.E.selectEmpDeptPos_COUNT         : <==      Total: 1
+2021-12-22 10:14:42.433 DEBUG --- [nio-8080-exec-3] c.s.m.d.EmployeeMapper.selectEmpDeptPos  : ==>  Preparing: select emp.*,pos.pos_num,pos.pos_name,dept.dep_num,dept.dep_name from Employee_info as emp join Department_info as dept on (emp.dep_num=dept.dep_num) join Position_info as pos on (emp.pos_num=pos.pos_num) order by emp.pos_num LIMIT ?, ? 
+2021-12-22 10:14:42.434 DEBUG --- [nio-8080-exec-3] c.s.m.d.EmployeeMapper.selectEmpDeptPos  : ==> Parameters: 5(Integer), 5(Integer)
+2021-12-22 10:14:42.437 DEBUG --- [nio-8080-exec-3] c.s.m.d.EmployeeMapper.selectEmpDeptPos  : <==      Total: 5
+2021-12-22 10:14:42.440 INFO  --- [nio-8080-exec-3] com.sony.mts.base.BaseController         : --------------------全部员工信息获取成功--------------------
+2021-12-22 10:14:43.553 INFO  --- [nio-8080-exec-7] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/emp/admin/homePage
+2021-12-22 10:14:45.177 INFO  --- [io-8080-exec-10] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectAllDept
+2021-12-22 10:14:45.179 INFO  --- [io-8080-exec-10] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-22 10:14:45.182 DEBUG --- [io-8080-exec-10] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-22 10:14:45.183 DEBUG --- [io-8080-exec-10] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-22 10:14:45.186 DEBUG --- [io-8080-exec-10] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-22 10:14:45.186 DEBUG --- [io-8080-exec-10] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ? 
+2021-12-22 10:14:45.187 DEBUG --- [io-8080-exec-10] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 5(Integer)
+2021-12-22 10:14:45.190 DEBUG --- [io-8080-exec-10] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 5
+2021-12-22 10:14:45.192 INFO  --- [io-8080-exec-10] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-22 10:14:46.162 INFO  --- [nio-8080-exec-5] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectAllDept
+2021-12-22 10:14:46.164 INFO  --- [nio-8080-exec-5] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-22 10:14:46.167 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-22 10:14:46.167 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-22 10:14:46.171 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-22 10:14:46.171 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ?, ? 
+2021-12-22 10:14:46.171 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 5(Integer), 5(Integer)
+2021-12-22 10:14:46.173 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 5
+2021-12-22 10:14:46.175 INFO  --- [nio-8080-exec-5] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-22 10:14:46.575 INFO  --- [nio-8080-exec-8] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectAllDept
+2021-12-22 10:14:46.577 INFO  --- [nio-8080-exec-8] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-22 10:14:46.580 DEBUG --- [nio-8080-exec-8] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-22 10:14:46.580 DEBUG --- [nio-8080-exec-8] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-22 10:14:46.584 DEBUG --- [nio-8080-exec-8] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-22 10:14:46.585 DEBUG --- [nio-8080-exec-8] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ?, ? 
+2021-12-22 10:14:46.585 DEBUG --- [nio-8080-exec-8] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 10(Integer), 5(Integer)
+2021-12-22 10:14:46.587 DEBUG --- [nio-8080-exec-8] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 2
+2021-12-22 10:14:46.589 INFO  --- [nio-8080-exec-8] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-22 10:14:48.375 INFO  --- [nio-8080-exec-2] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectByInput
+2021-12-22 10:14:48.376 INFO  --- [nio-8080-exec-2] com.sony.mts.base.BaseController         : --------------------模糊查询部门信息中……--------------------
+2021-12-22 10:14:48.384 DEBUG --- [nio-8080-exec-2] c.s.m.d.D.selectDeptByInput_COUNT        : ==>  Preparing: SELECT count(0) FROM Department_info WHERE dep_num LIKE CONCAT('%', ?, '%') OR dep_name LIKE CONCAT('%', ?, '%') OR chairman_num LIKE CONCAT('%', ?, '%') 
+2021-12-22 10:14:48.384 DEBUG --- [nio-8080-exec-2] c.s.m.d.D.selectDeptByInput_COUNT        : ==> Parameters: 99(String), 99(String), 99(String)
+2021-12-22 10:14:48.386 DEBUG --- [nio-8080-exec-2] c.s.m.d.D.selectDeptByInput_COUNT        : <==      Total: 1
+2021-12-22 10:14:48.388 INFO  --- [nio-8080-exec-2] com.sony.mts.base.BaseController         : --------------------根据用户输入的值没有搜索到结果--------------------
+2021-12-22 10:14:55.127 INFO  --- [nio-8080-exec-6] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/emp/admin/homePage
+2021-12-22 10:14:56.352 INFO  --- [io-8080-exec-10] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectAllDept
+2021-12-22 10:14:56.353 INFO  --- [io-8080-exec-10] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-22 10:14:56.357 DEBUG --- [io-8080-exec-10] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-22 10:14:56.357 DEBUG --- [io-8080-exec-10] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-22 10:14:56.361 DEBUG --- [io-8080-exec-10] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-22 10:14:56.361 DEBUG --- [io-8080-exec-10] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ? 
+2021-12-22 10:14:56.362 DEBUG --- [io-8080-exec-10] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 5(Integer)
+2021-12-22 10:14:56.364 DEBUG --- [io-8080-exec-10] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 5
+2021-12-22 10:14:56.366 INFO  --- [io-8080-exec-10] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-22 10:14:57.512 INFO  --- [nio-8080-exec-5] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectAllDept
+2021-12-22 10:14:57.513 INFO  --- [nio-8080-exec-5] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-22 10:14:57.519 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-22 10:14:57.519 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-22 10:14:57.522 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-22 10:14:57.524 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ?, ? 
+2021-12-22 10:14:57.524 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 5(Integer), 5(Integer)
+2021-12-22 10:14:57.527 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 5
+2021-12-22 10:14:57.529 INFO  --- [nio-8080-exec-5] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-22 10:14:59.879 INFO  --- [nio-8080-exec-7] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectAllDept
+2021-12-22 10:14:59.879 INFO  --- [nio-8080-exec-7] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-22 10:14:59.882 DEBUG --- [nio-8080-exec-7] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-22 10:14:59.882 DEBUG --- [nio-8080-exec-7] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-22 10:14:59.887 DEBUG --- [nio-8080-exec-7] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-22 10:14:59.887 DEBUG --- [nio-8080-exec-7] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ?, ? 
+2021-12-22 10:14:59.887 DEBUG --- [nio-8080-exec-7] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 10(Integer), 5(Integer)
+2021-12-22 10:14:59.889 DEBUG --- [nio-8080-exec-7] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 2
+2021-12-22 10:14:59.892 INFO  --- [nio-8080-exec-7] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-22 10:15:03.801 INFO  --- [nio-8080-exec-9] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectByInput
+2021-12-22 10:15:03.805 INFO  --- [nio-8080-exec-9] com.sony.mts.base.BaseController         : --------------------模糊查询部门信息中……--------------------
+2021-12-22 10:15:03.812 DEBUG --- [nio-8080-exec-9] c.s.m.d.D.selectDeptByInput_COUNT        : ==>  Preparing: SELECT count(0) FROM Department_info WHERE dep_num LIKE CONCAT('%', ?, '%') OR dep_name LIKE CONCAT('%', ?, '%') OR chairman_num LIKE CONCAT('%', ?, '%') 
+2021-12-22 10:15:03.812 DEBUG --- [nio-8080-exec-9] c.s.m.d.D.selectDeptByInput_COUNT        : ==> Parameters: 566656(String), 566656(String), 566656(String)
+2021-12-22 10:15:03.819 DEBUG --- [nio-8080-exec-9] c.s.m.d.D.selectDeptByInput_COUNT        : <==      Total: 1
+2021-12-22 10:15:03.821 INFO  --- [nio-8080-exec-9] com.sony.mts.base.BaseController         : --------------------根据用户输入的值没有搜索到结果--------------------
+2021-12-22 10:15:08.663 INFO  --- [nio-8080-exec-3] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/emp/admin/homePage

@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: mts
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: 5109u12433
+Implementation-Vendor-Id: com.sony
+Build-Jdk: 1.8.0_172
+Implementation-URL: http://maven.apache.org
+Created-By: Maven Integration for Eclipse
+

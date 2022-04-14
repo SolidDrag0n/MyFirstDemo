@@ -1,0 +1,63 @@
+@charset "UTF-8";
+.body{
+	background-image:url('../img/background_login.jpg');
+}
+.head404{
+    width:580px;
+    height:234px;
+    margin:50px auto 0 auto;
+    background:url(/static/img/404NotFound.png) no-repeat;
+    position: absolute;
+      top: 15%;
+	  left: 35%;
+}
+.txtbg404{
+    width:499px;
+    height:169px;
+    margin:10px auto 0 auto;
+    background:url(/static/img/404NotFound_Detail.png) no-repeat;
+    position: absolute;
+      top: 45%;
+	  left: 37%;
+}
+.txtbg404 .txtbox{
+    width:390px;
+    position:relative;
+    top:30px;
+    left:60px;
+    color:#eee;
+    font-size:13px;
+}
+.txtbg404 .txtbox p {
+    margin:5px 0;
+    line-height:18px;
+}
+.txtbg404 .txtbox p a {
+    color:#eee;
+    text-decoration:none;
+    float:right;
+}
+.txtbg404 .txtbox p a:hover {
+    color:#FC9D1D;
+    text-decoration:underline;
+}
+
+body {color: #666; text-align: center; font-family: arial, sans-serif; }
+
+div.dialog {
+      width: 25em;
+      padding: 0 4em;
+      margin: 4em auto 0 auto;
+      border: 1px solid #ccc;
+      border-right-color: #999;
+      border-bottom-color: #999;
+      border-radius: 20px;
+      margin: auto;
+      position: absolute;
+      top: 25%;
+	  left: 35%;
+ }
+ div.dialog a{color:#eee;}
+ h1 { font-size: 100%; color:#eee; line-height: 1.5em; }
+ p   { font-size: 100%; color:#eee; line-height: 1.5em; }
+    

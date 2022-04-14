@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>testAjax</title>
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    123
+
+    <script>
+    
+        $(function(){
+        	$.ajax({
+        		url:"employeeList",
+        		type:"post",
+        		dataType:"json",
+        		success:function(data){
+        			for(var v in data){
+        				console.log(data[v].empId);
+        				console.log(data[v].empName);
+        			}
+        		},
+        		error:function(error){
+        			alert(error);
+        		}
+        	})
+        })
+    
+    </script>
+
+</body>
+</html>

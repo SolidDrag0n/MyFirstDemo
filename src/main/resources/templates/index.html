@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>员工管理系统</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet"
+	href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="/static/css/signin.css" rel="stylesheet" type="text/css" />
+<script
+	src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script
+	src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+
+		<form class="form-signin" action="/login/detail" method="post">
+
+			<h2 class="form-signin-heading">Login</h2>
+
+			<label for="empId" class="sr-only">用户名</label> <input type="text"
+				class="form-control" placeholder="员工ID" required autofocus
+				name="empId"> <label for="password" class="sr-only">密码</label>
+			<input type="password" class="form-control" placeholder="请输入密码"
+				required autofocus name="passWd">
+
+			<button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+
+			<span th:text="${illegalreq}" th:if=${illegalreq}!=null class="alert"></span>
+			<span th:text="${verify_fail}" th:if=${verify_fail}!=null
+				class="alert"></span>
+
+		</form>
+
+	</div>
+</body>
+</html>

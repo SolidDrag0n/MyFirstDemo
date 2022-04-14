@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<script src="/static/js/protectElements.js" type="text/javascript"></script>
+<meta charset="UTF-8">
+<link href="/static/css/error.css" rel="stylesheet" type="text/css" />
+<title th:text="'status:'+${status}"></title>
+</head>
+<body bgcolor="#494949">
+	<div class="head404"></div>
+	<div class="txtbg404">
+		<div class="txtbox">
+			<p th:text="${path}"></p>
+			<p th:text="${#dates.format(timestamp,'yyyy-MM-dd HH:mm:ss')}"></p>
+			<p th:text="${status}"></p>
+			<p th:text="${error}"></p>
+			<p th:text="${message}"></p>
+			<p>
+				<a th:href="@{/login/logout}">Exit</a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>

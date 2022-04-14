@@ -1,0 +1,10 @@
+2022-01-11 10:05:16.346 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 14544 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2022-01-11 10:05:16.511 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2022-01-11 10:05:18.333 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 2.359 seconds (JVM running for 3.344)
+2022-01-11 10:05:24.950 DEBUG --- [nio-8080-exec-6] c.s.mts.dao.EmployeeMapper.checkEmployee : ==>  Preparing: select * from Employee_info where emp_id=? and pass_wd=? 
+2022-01-11 10:05:24.966 DEBUG --- [nio-8080-exec-6] c.s.mts.dao.EmployeeMapper.checkEmployee : ==> Parameters: admin(String), 21232f297a57a5a743894a0e4a801fc3(String)
+2022-01-11 10:05:24.985 DEBUG --- [nio-8080-exec-6] c.s.mts.dao.EmployeeMapper.checkEmployee : <==      Total: 1
+2022-01-11 10:05:24.992 INFO  --- [nio-8080-exec-6] com.sony.mts.base.BaseController         : --------------------项目经理登入--------------------
+2022-01-11 11:18:36.784 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 14544 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2022-01-11 11:18:36.784 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2022-01-11 11:18:37.269 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.545 seconds (JVM running for 4402.223)

@@ -1,0 +1,549 @@
+2021-12-15 09:49:19.141 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 5556 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 09:49:19.273 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 09:49:21.373 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 2.569 seconds (JVM running for 3.401)
+2021-12-15 09:50:03.076 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 5608 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 09:50:03.076 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 09:50:05.044 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 2.324 seconds (JVM running for 3.269)
+2021-12-15 09:50:28.600 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 5608 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 09:50:28.600 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 09:50:29.077 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.53 seconds (JVM running for 27.295)
+2021-12-15 09:50:43.376 DEBUG --- [nio-8080-exec-6] c.s.mts.dao.EmployeeMapper.checkEmployee : ==>  Preparing: select * from Employee_info where emp_id=? and pass_wd=? 
+2021-12-15 09:50:43.414 DEBUG --- [nio-8080-exec-6] c.s.mts.dao.EmployeeMapper.checkEmployee : ==> Parameters: admin(String), admin(String)
+2021-12-15 09:50:43.435 DEBUG --- [nio-8080-exec-6] c.s.mts.dao.EmployeeMapper.checkEmployee : <==      Total: 1
+2021-12-15 09:50:43.443 INFO  --- [nio-8080-exec-6] com.sony.mts.base.BaseController         : --------------------项目经理登入--------------------
+2021-12-15 09:50:46.789 INFO  --- [nio-8080-exec-9] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/toInsertDept
+2021-12-15 09:50:46.791 INFO  --- [nio-8080-exec-9] com.sony.mts.base.BaseController         : --------------------开始追加部门信息--------------------
+2021-12-15 09:50:55.171 INFO  --- [nio-8080-exec-3] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/insertDept
+2021-12-15 09:50:55.185 DEBUG --- [nio-8080-exec-3] c.s.m.d.DepartmentMapper.selectByDepName : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info where dep_name = ? 
+2021-12-15 09:50:55.185 DEBUG --- [nio-8080-exec-3] c.s.m.d.DepartmentMapper.selectByDepName : ==> Parameters: 121501(String)
+2021-12-15 09:50:55.186 DEBUG --- [nio-8080-exec-3] c.s.m.d.DepartmentMapper.selectByDepName : <==      Total: 0
+2021-12-15 09:50:55.190 DEBUG --- [nio-8080-exec-3] c.s.m.d.D.selectByPrimaryKey             : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info where dep_num = ? 
+2021-12-15 09:50:55.190 DEBUG --- [nio-8080-exec-3] c.s.m.d.D.selectByPrimaryKey             : ==> Parameters: 121501(String)
+2021-12-15 09:50:55.191 DEBUG --- [nio-8080-exec-3] c.s.m.d.D.selectByPrimaryKey             : <==      Total: 0
+2021-12-15 09:50:55.193 DEBUG --- [nio-8080-exec-3] com.sony.mts.dao.DepartmentMapper.insert : ==>  Preparing: insert into Department_info (dep_num, dep_name, chairman_num) values (?, ?, ?) 
+2021-12-15 09:50:55.193 DEBUG --- [nio-8080-exec-3] com.sony.mts.dao.DepartmentMapper.insert : ==> Parameters: 121501(String), 121501(String), 121501(String)
+2021-12-15 09:50:55.194 DEBUG --- [nio-8080-exec-3] com.sony.mts.dao.DepartmentMapper.insert : <==    Updates: 1
+2021-12-15 09:50:57.858 INFO  --- [nio-8080-exec-7] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/emp/admin/homePage
+2021-12-15 09:50:59.372 INFO  --- [io-8080-exec-10] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectAllDept
+2021-12-15 09:50:59.375 INFO  --- [io-8080-exec-10] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-15 09:50:59.413 DEBUG --- [io-8080-exec-10] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-15 09:50:59.413 DEBUG --- [io-8080-exec-10] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-15 09:50:59.416 DEBUG --- [io-8080-exec-10] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-15 09:50:59.417 DEBUG --- [io-8080-exec-10] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ? 
+2021-12-15 09:50:59.417 DEBUG --- [io-8080-exec-10] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 5(Integer)
+2021-12-15 09:50:59.419 DEBUG --- [io-8080-exec-10] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 5
+2021-12-15 09:50:59.422 INFO  --- [io-8080-exec-10] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-15 09:51:00.339 INFO  --- [nio-8080-exec-4] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectByInput
+2021-12-15 09:51:00.340 INFO  --- [nio-8080-exec-4] com.sony.mts.base.BaseController         : --------------------模糊查询部门信息中……--------------------
+2021-12-15 09:51:00.351 DEBUG --- [nio-8080-exec-4] c.s.m.d.D.selectDeptByInput_COUNT        : ==>  Preparing: SELECT count(0) FROM Department_info WHERE dep_num LIKE CONCAT('%', ?, '%') OR dep_name LIKE CONCAT('%', ?, '%') OR chairman_num LIKE CONCAT('%', ?, '%') 
+2021-12-15 09:51:00.352 DEBUG --- [nio-8080-exec-4] c.s.m.d.D.selectDeptByInput_COUNT        : ==> Parameters: 121501(String), 121501(String), 121501(String)
+2021-12-15 09:51:00.353 DEBUG --- [nio-8080-exec-4] c.s.m.d.D.selectDeptByInput_COUNT        : <==      Total: 1
+2021-12-15 09:51:00.354 DEBUG --- [nio-8080-exec-4] c.s.m.d.D.selectDeptByInput              : ==>  Preparing: select * from Department_info where dep_num like CONCAT('%',?,'%') or dep_name like CONCAT('%',?,'%') or chairman_num like CONCAT('%',?,'%') LIMIT ? 
+2021-12-15 09:51:00.354 DEBUG --- [nio-8080-exec-4] c.s.m.d.D.selectDeptByInput              : ==> Parameters: 121501(String), 121501(String), 121501(String), 5(Integer)
+2021-12-15 09:51:00.356 DEBUG --- [nio-8080-exec-4] c.s.m.d.D.selectDeptByInput              : <==      Total: 1
+2021-12-15 09:51:49.636 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 5608 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 09:51:49.636 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 09:51:50.075 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.482 seconds (JVM running for 108.277)
+2021-12-15 09:51:54.094 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 5608 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 09:51:54.094 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 09:51:54.511 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.458 seconds (JVM running for 112.714)
+2021-12-15 09:51:57.986 DEBUG --- [nio-8080-exec-4] c.s.mts.dao.EmployeeMapper.checkEmployee : ==>  Preparing: select * from Employee_info where emp_id=? and pass_wd=? 
+2021-12-15 09:51:57.987 DEBUG --- [nio-8080-exec-4] c.s.mts.dao.EmployeeMapper.checkEmployee : ==> Parameters: admin(String), admin(String)
+2021-12-15 09:51:57.988 DEBUG --- [nio-8080-exec-4] c.s.mts.dao.EmployeeMapper.checkEmployee : <==      Total: 1
+2021-12-15 09:51:57.990 INFO  --- [nio-8080-exec-4] com.sony.mts.base.BaseController         : --------------------项目经理登入--------------------
+2021-12-15 09:52:00.761 INFO  --- [nio-8080-exec-7] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/toInsertDept
+2021-12-15 09:52:00.763 INFO  --- [nio-8080-exec-7] com.sony.mts.base.BaseController         : --------------------开始追加部门信息--------------------
+2021-12-15 09:52:05.445 INFO  --- [nio-8080-exec-1] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/insertDept
+2021-12-15 09:52:05.452 DEBUG --- [nio-8080-exec-1] c.s.m.d.DepartmentMapper.selectByDepName : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info where dep_name = ? 
+2021-12-15 09:52:05.453 DEBUG --- [nio-8080-exec-1] c.s.m.d.DepartmentMapper.selectByDepName : ==> Parameters: 121502(String)
+2021-12-15 09:52:05.455 DEBUG --- [nio-8080-exec-1] c.s.m.d.DepartmentMapper.selectByDepName : <==      Total: 0
+2021-12-15 09:52:05.456 DEBUG --- [nio-8080-exec-1] c.s.m.d.D.selectByPrimaryKey             : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info where dep_num = ? 
+2021-12-15 09:52:05.457 DEBUG --- [nio-8080-exec-1] c.s.m.d.D.selectByPrimaryKey             : ==> Parameters: 121502(String)
+2021-12-15 09:52:05.459 DEBUG --- [nio-8080-exec-1] c.s.m.d.D.selectByPrimaryKey             : <==      Total: 0
+2021-12-15 09:52:05.461 DEBUG --- [nio-8080-exec-1] com.sony.mts.dao.DepartmentMapper.insert : ==>  Preparing: insert into Department_info (dep_num, dep_name, chairman_num) values (?, ?, ?) 
+2021-12-15 09:52:05.462 DEBUG --- [nio-8080-exec-1] com.sony.mts.dao.DepartmentMapper.insert : ==> Parameters: 121502(String), 121502(String), 121502(String)
+2021-12-15 09:52:05.468 DEBUG --- [nio-8080-exec-1] com.sony.mts.dao.DepartmentMapper.insert : <==    Updates: 1
+2021-12-15 09:52:06.931 INFO  --- [nio-8080-exec-5] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectAllDept
+2021-12-15 09:52:06.933 INFO  --- [nio-8080-exec-5] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-15 09:52:06.935 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-15 09:52:06.935 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-15 09:52:06.940 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-15 09:52:06.940 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ? 
+2021-12-15 09:52:06.941 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 5(Integer)
+2021-12-15 09:52:06.942 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 5
+2021-12-15 09:52:06.943 INFO  --- [nio-8080-exec-5] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-15 09:52:08.321 INFO  --- [nio-8080-exec-9] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectByInput
+2021-12-15 09:52:08.327 INFO  --- [nio-8080-exec-9] com.sony.mts.base.BaseController         : --------------------模糊查询部门信息中……--------------------
+2021-12-15 09:52:08.332 DEBUG --- [nio-8080-exec-9] c.s.m.d.D.selectDeptByInput_COUNT        : ==>  Preparing: SELECT count(0) FROM Department_info WHERE dep_num LIKE CONCAT('%', ?, '%') OR dep_name LIKE CONCAT('%', ?, '%') OR chairman_num LIKE CONCAT('%', ?, '%') 
+2021-12-15 09:52:08.332 DEBUG --- [nio-8080-exec-9] c.s.m.d.D.selectDeptByInput_COUNT        : ==> Parameters: 121502(String), 121502(String), 121502(String)
+2021-12-15 09:52:08.334 DEBUG --- [nio-8080-exec-9] c.s.m.d.D.selectDeptByInput_COUNT        : <==      Total: 1
+2021-12-15 09:52:08.334 DEBUG --- [nio-8080-exec-9] c.s.m.d.D.selectDeptByInput              : ==>  Preparing: select * from Department_info where dep_num like CONCAT('%',?,'%') or dep_name like CONCAT('%',?,'%') or chairman_num like CONCAT('%',?,'%') LIMIT ? 
+2021-12-15 09:52:08.335 DEBUG --- [nio-8080-exec-9] c.s.m.d.D.selectDeptByInput              : ==> Parameters: 121502(String), 121502(String), 121502(String), 5(Integer)
+2021-12-15 09:52:08.336 DEBUG --- [nio-8080-exec-9] c.s.m.d.D.selectDeptByInput              : <==      Total: 1
+2021-12-15 09:52:20.430 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 5608 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 09:52:20.430 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 09:52:20.815 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.438 seconds (JVM running for 139.021)
+2021-12-15 09:52:29.916 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 5608 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 09:52:29.916 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 09:52:30.315 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.442 seconds (JVM running for 148.505)
+2021-12-15 09:52:37.831 DEBUG --- [nio-8080-exec-4] c.s.mts.dao.EmployeeMapper.checkEmployee : ==>  Preparing: select * from Employee_info where emp_id=? and pass_wd=? 
+2021-12-15 09:52:37.831 DEBUG --- [nio-8080-exec-4] c.s.mts.dao.EmployeeMapper.checkEmployee : ==> Parameters: admin(String), admin(String)
+2021-12-15 09:52:37.834 DEBUG --- [nio-8080-exec-4] c.s.mts.dao.EmployeeMapper.checkEmployee : <==      Total: 1
+2021-12-15 09:52:37.836 INFO  --- [nio-8080-exec-4] com.sony.mts.base.BaseController         : --------------------项目经理登入--------------------
+2021-12-15 09:52:39.219 INFO  --- [nio-8080-exec-7] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/toInsertDept
+2021-12-15 09:52:39.221 INFO  --- [nio-8080-exec-7] com.sony.mts.base.BaseController         : --------------------开始追加部门信息--------------------
+2021-12-15 09:52:44.430 INFO  --- [nio-8080-exec-1] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/insertDept
+2021-12-15 09:52:44.438 DEBUG --- [nio-8080-exec-1] c.s.m.d.DepartmentMapper.selectByDepName : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info where dep_name = ? 
+2021-12-15 09:52:44.438 DEBUG --- [nio-8080-exec-1] c.s.m.d.DepartmentMapper.selectByDepName : ==> Parameters: 121503(String)
+2021-12-15 09:52:44.442 DEBUG --- [nio-8080-exec-1] c.s.m.d.DepartmentMapper.selectByDepName : <==      Total: 0
+2021-12-15 09:52:44.448 DEBUG --- [nio-8080-exec-1] c.s.m.d.D.selectByPrimaryKey             : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info where dep_num = ? 
+2021-12-15 09:52:44.449 DEBUG --- [nio-8080-exec-1] c.s.m.d.D.selectByPrimaryKey             : ==> Parameters: 121503(String)
+2021-12-15 09:52:44.451 DEBUG --- [nio-8080-exec-1] c.s.m.d.D.selectByPrimaryKey             : <==      Total: 0
+2021-12-15 09:52:44.455 DEBUG --- [nio-8080-exec-1] com.sony.mts.dao.DepartmentMapper.insert : ==>  Preparing: insert into Department_info (dep_num, dep_name, chairman_num) values (?, ?, ?) 
+2021-12-15 09:52:44.456 DEBUG --- [nio-8080-exec-1] com.sony.mts.dao.DepartmentMapper.insert : ==> Parameters: 121503(String), 121503(String), 121503.(String)
+2021-12-15 09:52:44.459 DEBUG --- [nio-8080-exec-1] com.sony.mts.dao.DepartmentMapper.insert : <==    Updates: 1
+2021-12-15 09:52:46.652 INFO  --- [nio-8080-exec-5] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectAllDept
+2021-12-15 09:52:46.653 INFO  --- [nio-8080-exec-5] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-15 09:52:46.656 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-15 09:52:46.656 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-15 09:52:46.660 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-15 09:52:46.661 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ? 
+2021-12-15 09:52:46.661 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 5(Integer)
+2021-12-15 09:52:46.663 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 5
+2021-12-15 09:52:46.665 INFO  --- [nio-8080-exec-5] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-15 09:52:47.129 INFO  --- [nio-8080-exec-9] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectByInput
+2021-12-15 09:52:47.129 INFO  --- [nio-8080-exec-9] com.sony.mts.base.BaseController         : --------------------模糊查询部门信息中……--------------------
+2021-12-15 09:52:47.135 DEBUG --- [nio-8080-exec-9] c.s.m.d.D.selectDeptByInput_COUNT        : ==>  Preparing: SELECT count(0) FROM Department_info WHERE dep_num LIKE CONCAT('%', ?, '%') OR dep_name LIKE CONCAT('%', ?, '%') OR chairman_num LIKE CONCAT('%', ?, '%') 
+2021-12-15 09:52:47.135 DEBUG --- [nio-8080-exec-9] c.s.m.d.D.selectDeptByInput_COUNT        : ==> Parameters: 121503(String), 121503(String), 121503(String)
+2021-12-15 09:52:47.137 DEBUG --- [nio-8080-exec-9] c.s.m.d.D.selectDeptByInput_COUNT        : <==      Total: 1
+2021-12-15 09:52:47.137 DEBUG --- [nio-8080-exec-9] c.s.m.d.D.selectDeptByInput              : ==>  Preparing: select * from Department_info where dep_num like CONCAT('%',?,'%') or dep_name like CONCAT('%',?,'%') or chairman_num like CONCAT('%',?,'%') LIMIT ? 
+2021-12-15 09:52:47.137 DEBUG --- [nio-8080-exec-9] c.s.m.d.D.selectDeptByInput              : ==> Parameters: 121503(String), 121503(String), 121503(String), 5(Integer)
+2021-12-15 09:52:47.139 DEBUG --- [nio-8080-exec-9] c.s.m.d.D.selectDeptByInput              : <==      Total: 1
+2021-12-15 09:52:58.227 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 5608 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 09:52:58.227 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 09:52:58.621 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.439 seconds (JVM running for 176.807)
+2021-12-15 09:53:01.560 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 5608 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 09:53:01.560 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 09:53:01.964 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.451 seconds (JVM running for 180.151)
+2021-12-15 09:53:05.805 DEBUG --- [nio-8080-exec-4] c.s.mts.dao.EmployeeMapper.checkEmployee : ==>  Preparing: select * from Employee_info where emp_id=? and pass_wd=? 
+2021-12-15 09:53:05.806 DEBUG --- [nio-8080-exec-4] c.s.mts.dao.EmployeeMapper.checkEmployee : ==> Parameters: admin(String), admin(String)
+2021-12-15 09:53:05.808 DEBUG --- [nio-8080-exec-4] c.s.mts.dao.EmployeeMapper.checkEmployee : <==      Total: 1
+2021-12-15 09:53:05.811 INFO  --- [nio-8080-exec-4] com.sony.mts.base.BaseController         : --------------------项目经理登入--------------------
+2021-12-15 09:53:07.794 INFO  --- [nio-8080-exec-7] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/toInsertDept
+2021-12-15 09:53:07.805 INFO  --- [nio-8080-exec-7] com.sony.mts.base.BaseController         : --------------------开始追加部门信息--------------------
+2021-12-15 09:53:13.717 INFO  --- [nio-8080-exec-1] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/insertDept
+2021-12-15 09:53:13.728 DEBUG --- [nio-8080-exec-1] c.s.m.d.DepartmentMapper.selectByDepName : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info where dep_name = ? 
+2021-12-15 09:53:13.728 DEBUG --- [nio-8080-exec-1] c.s.m.d.DepartmentMapper.selectByDepName : ==> Parameters: 121504(String)
+2021-12-15 09:53:13.729 DEBUG --- [nio-8080-exec-1] c.s.m.d.DepartmentMapper.selectByDepName : <==      Total: 0
+2021-12-15 09:53:13.730 DEBUG --- [nio-8080-exec-1] c.s.m.d.D.selectByPrimaryKey             : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info where dep_num = ? 
+2021-12-15 09:53:13.730 DEBUG --- [nio-8080-exec-1] c.s.m.d.D.selectByPrimaryKey             : ==> Parameters: 121504(String)
+2021-12-15 09:53:13.731 DEBUG --- [nio-8080-exec-1] c.s.m.d.D.selectByPrimaryKey             : <==      Total: 0
+2021-12-15 09:53:13.731 DEBUG --- [nio-8080-exec-1] com.sony.mts.dao.DepartmentMapper.insert : ==>  Preparing: insert into Department_info (dep_num, dep_name, chairman_num) values (?, ?, ?) 
+2021-12-15 09:53:13.731 DEBUG --- [nio-8080-exec-1] com.sony.mts.dao.DepartmentMapper.insert : ==> Parameters: 121504(String), 121504(String), 121504(String)
+2021-12-15 09:53:13.734 DEBUG --- [nio-8080-exec-1] com.sony.mts.dao.DepartmentMapper.insert : <==    Updates: 1
+2021-12-15 09:53:15.692 INFO  --- [nio-8080-exec-5] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectAllDept
+2021-12-15 09:53:15.695 INFO  --- [nio-8080-exec-5] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-15 09:53:15.696 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-15 09:53:15.697 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-15 09:53:15.700 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-15 09:53:15.700 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ? 
+2021-12-15 09:53:15.700 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 5(Integer)
+2021-12-15 09:53:15.701 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 5
+2021-12-15 09:53:15.702 INFO  --- [nio-8080-exec-5] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-15 09:53:16.387 INFO  --- [nio-8080-exec-8] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectByInput
+2021-12-15 09:53:16.391 INFO  --- [nio-8080-exec-8] com.sony.mts.base.BaseController         : --------------------模糊查询部门信息中……--------------------
+2021-12-15 09:53:16.393 DEBUG --- [nio-8080-exec-8] c.s.m.d.D.selectDeptByInput_COUNT        : ==>  Preparing: SELECT count(0) FROM Department_info WHERE dep_num LIKE CONCAT('%', ?, '%') OR dep_name LIKE CONCAT('%', ?, '%') OR chairman_num LIKE CONCAT('%', ?, '%') 
+2021-12-15 09:53:16.393 DEBUG --- [nio-8080-exec-8] c.s.m.d.D.selectDeptByInput_COUNT        : ==> Parameters: 121504(String), 121504(String), 121504(String)
+2021-12-15 09:53:16.395 DEBUG --- [nio-8080-exec-8] c.s.m.d.D.selectDeptByInput_COUNT        : <==      Total: 1
+2021-12-15 09:53:16.395 INFO  --- [nio-8080-exec-8] com.sony.mts.base.BaseController         : --------------------根据用户输入的值没有搜索到结果--------------------
+2021-12-15 09:53:43.034 INFO  --- [nio-8080-exec-3] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectAllDept
+2021-12-15 09:53:43.037 INFO  --- [nio-8080-exec-3] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-15 09:53:43.038 DEBUG --- [nio-8080-exec-3] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-15 09:53:43.038 DEBUG --- [nio-8080-exec-3] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-15 09:53:43.042 DEBUG --- [nio-8080-exec-3] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-15 09:53:43.042 DEBUG --- [nio-8080-exec-3] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ? 
+2021-12-15 09:53:43.042 DEBUG --- [nio-8080-exec-3] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 5(Integer)
+2021-12-15 09:53:43.044 DEBUG --- [nio-8080-exec-3] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 5
+2021-12-15 09:53:43.044 INFO  --- [nio-8080-exec-3] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-15 09:53:45.001 INFO  --- [nio-8080-exec-6] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectAllDept
+2021-12-15 09:53:45.005 INFO  --- [nio-8080-exec-6] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-15 09:53:45.006 DEBUG --- [nio-8080-exec-6] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-15 09:53:45.006 DEBUG --- [nio-8080-exec-6] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-15 09:53:45.010 DEBUG --- [nio-8080-exec-6] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-15 09:53:45.010 DEBUG --- [nio-8080-exec-6] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ?, ? 
+2021-12-15 09:53:45.010 DEBUG --- [nio-8080-exec-6] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 5(Integer), 5(Integer)
+2021-12-15 09:53:45.013 DEBUG --- [nio-8080-exec-6] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 5
+2021-12-15 09:53:45.013 INFO  --- [nio-8080-exec-6] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-15 09:53:45.416 INFO  --- [nio-8080-exec-1] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectAllDept
+2021-12-15 09:53:45.418 INFO  --- [nio-8080-exec-1] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-15 09:53:45.419 DEBUG --- [nio-8080-exec-1] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-15 09:53:45.419 DEBUG --- [nio-8080-exec-1] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-15 09:53:45.423 DEBUG --- [nio-8080-exec-1] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-15 09:53:45.424 DEBUG --- [nio-8080-exec-1] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ?, ? 
+2021-12-15 09:53:45.424 DEBUG --- [nio-8080-exec-1] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 10(Integer), 5(Integer)
+2021-12-15 09:53:45.426 DEBUG --- [nio-8080-exec-1] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 4
+2021-12-15 09:53:45.426 INFO  --- [nio-8080-exec-1] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-15 09:53:47.221 INFO  --- [nio-8080-exec-5] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/deleteDept/121502
+2021-12-15 09:53:47.225 INFO  --- [nio-8080-exec-5] com.sony.mts.base.BaseController         : --------------------开始删除部门信息--------------------
+2021-12-15 09:53:47.226 DEBUG --- [nio-8080-exec-5] c.s.m.d.EmployeeMapper.checkEmpExistDep  : ==>  Preparing: select * from Employee_info where dep_num=? 
+2021-12-15 09:53:47.226 DEBUG --- [nio-8080-exec-5] c.s.m.d.EmployeeMapper.checkEmpExistDep  : ==> Parameters: 121502(String)
+2021-12-15 09:53:47.229 DEBUG --- [nio-8080-exec-5] c.s.m.d.EmployeeMapper.checkEmpExistDep  : <==      Total: 0
+2021-12-15 09:53:47.229 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.deleteByPrimaryKey             : ==>  Preparing: delete from Department_info where dep_num = ? 
+2021-12-15 09:53:47.229 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.deleteByPrimaryKey             : ==> Parameters: 121502(String)
+2021-12-15 09:53:47.232 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.deleteByPrimaryKey             : <==    Updates: 1
+2021-12-15 09:53:47.232 INFO  --- [nio-8080-exec-5] com.sony.mts.base.BaseController         : --------------------部门信息删除成功--------------------
+2021-12-15 09:53:47.232 INFO  --- [nio-8080-exec-5] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-15 09:53:47.235 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-15 09:53:47.235 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-15 09:53:47.239 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-15 09:53:47.239 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ? 
+2021-12-15 09:53:47.239 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 5(Integer)
+2021-12-15 09:53:47.241 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 5
+2021-12-15 09:53:47.241 INFO  --- [nio-8080-exec-5] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-15 09:53:49.338 INFO  --- [nio-8080-exec-8] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectAllDept
+2021-12-15 09:53:49.341 INFO  --- [nio-8080-exec-8] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-15 09:53:49.342 DEBUG --- [nio-8080-exec-8] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-15 09:53:49.343 DEBUG --- [nio-8080-exec-8] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-15 09:53:49.346 DEBUG --- [nio-8080-exec-8] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-15 09:53:49.346 DEBUG --- [nio-8080-exec-8] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ?, ? 
+2021-12-15 09:53:49.347 DEBUG --- [nio-8080-exec-8] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 5(Integer), 5(Integer)
+2021-12-15 09:53:49.348 DEBUG --- [nio-8080-exec-8] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 5
+2021-12-15 09:53:49.348 INFO  --- [nio-8080-exec-8] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-15 09:53:51.311 INFO  --- [nio-8080-exec-2] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/deleteDept/121501
+2021-12-15 09:53:51.314 INFO  --- [nio-8080-exec-2] com.sony.mts.base.BaseController         : --------------------开始删除部门信息--------------------
+2021-12-15 09:53:51.314 DEBUG --- [nio-8080-exec-2] c.s.m.d.EmployeeMapper.checkEmpExistDep  : ==>  Preparing: select * from Employee_info where dep_num=? 
+2021-12-15 09:53:51.315 DEBUG --- [nio-8080-exec-2] c.s.m.d.EmployeeMapper.checkEmpExistDep  : ==> Parameters: 121501(String)
+2021-12-15 09:53:51.316 DEBUG --- [nio-8080-exec-2] c.s.m.d.EmployeeMapper.checkEmpExistDep  : <==      Total: 0
+2021-12-15 09:53:51.317 DEBUG --- [nio-8080-exec-2] c.s.m.d.D.deleteByPrimaryKey             : ==>  Preparing: delete from Department_info where dep_num = ? 
+2021-12-15 09:53:51.318 DEBUG --- [nio-8080-exec-2] c.s.m.d.D.deleteByPrimaryKey             : ==> Parameters: 121501(String)
+2021-12-15 09:53:51.321 DEBUG --- [nio-8080-exec-2] c.s.m.d.D.deleteByPrimaryKey             : <==    Updates: 1
+2021-12-15 09:53:51.321 INFO  --- [nio-8080-exec-2] com.sony.mts.base.BaseController         : --------------------部门信息删除成功--------------------
+2021-12-15 09:53:51.321 INFO  --- [nio-8080-exec-2] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-15 09:53:51.322 DEBUG --- [nio-8080-exec-2] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-15 09:53:51.322 DEBUG --- [nio-8080-exec-2] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-15 09:53:51.326 DEBUG --- [nio-8080-exec-2] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-15 09:53:51.326 DEBUG --- [nio-8080-exec-2] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ? 
+2021-12-15 09:53:51.326 DEBUG --- [nio-8080-exec-2] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 5(Integer)
+2021-12-15 09:53:51.328 DEBUG --- [nio-8080-exec-2] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 5
+2021-12-15 09:53:51.328 INFO  --- [nio-8080-exec-2] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-15 09:53:53.343 INFO  --- [nio-8080-exec-6] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectAllDept
+2021-12-15 09:53:53.357 INFO  --- [nio-8080-exec-6] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-15 09:53:53.358 DEBUG --- [nio-8080-exec-6] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-15 09:53:53.358 DEBUG --- [nio-8080-exec-6] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-15 09:53:53.363 DEBUG --- [nio-8080-exec-6] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-15 09:53:53.364 DEBUG --- [nio-8080-exec-6] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ?, ? 
+2021-12-15 09:53:53.364 DEBUG --- [nio-8080-exec-6] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 5(Integer), 5(Integer)
+2021-12-15 09:53:53.365 DEBUG --- [nio-8080-exec-6] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 5
+2021-12-15 09:53:53.365 INFO  --- [nio-8080-exec-6] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-15 09:53:53.744 INFO  --- [nio-8080-exec-1] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectAllDept
+2021-12-15 09:53:53.757 INFO  --- [nio-8080-exec-1] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-15 09:53:53.757 DEBUG --- [nio-8080-exec-1] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-15 09:53:53.757 DEBUG --- [nio-8080-exec-1] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-15 09:53:53.761 DEBUG --- [nio-8080-exec-1] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-15 09:53:53.762 DEBUG --- [nio-8080-exec-1] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ?, ? 
+2021-12-15 09:53:53.762 DEBUG --- [nio-8080-exec-1] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 10(Integer), 5(Integer)
+2021-12-15 09:53:53.764 DEBUG --- [nio-8080-exec-1] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 2
+2021-12-15 09:53:53.764 INFO  --- [nio-8080-exec-1] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-15 09:53:54.820 INFO  --- [nio-8080-exec-5] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectAllDept
+2021-12-15 09:53:54.822 INFO  --- [nio-8080-exec-5] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-15 09:53:54.823 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-15 09:53:54.823 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-15 09:53:54.827 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-15 09:53:54.827 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ?, ? 
+2021-12-15 09:53:54.828 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 5(Integer), 5(Integer)
+2021-12-15 09:53:54.830 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 5
+2021-12-15 09:53:54.830 INFO  --- [nio-8080-exec-5] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-15 09:53:56.139 INFO  --- [nio-8080-exec-8] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/deleteDept/121503
+2021-12-15 09:53:56.160 INFO  --- [nio-8080-exec-8] com.sony.mts.base.BaseController         : --------------------开始删除部门信息--------------------
+2021-12-15 09:53:56.160 DEBUG --- [nio-8080-exec-8] c.s.m.d.EmployeeMapper.checkEmpExistDep  : ==>  Preparing: select * from Employee_info where dep_num=? 
+2021-12-15 09:53:56.161 DEBUG --- [nio-8080-exec-8] c.s.m.d.EmployeeMapper.checkEmpExistDep  : ==> Parameters: 121503(String)
+2021-12-15 09:53:56.161 DEBUG --- [nio-8080-exec-8] c.s.m.d.EmployeeMapper.checkEmpExistDep  : <==      Total: 0
+2021-12-15 09:53:56.162 DEBUG --- [nio-8080-exec-8] c.s.m.d.D.deleteByPrimaryKey             : ==>  Preparing: delete from Department_info where dep_num = ? 
+2021-12-15 09:53:56.162 DEBUG --- [nio-8080-exec-8] c.s.m.d.D.deleteByPrimaryKey             : ==> Parameters: 121503(String)
+2021-12-15 09:53:56.165 DEBUG --- [nio-8080-exec-8] c.s.m.d.D.deleteByPrimaryKey             : <==    Updates: 1
+2021-12-15 09:53:56.165 INFO  --- [nio-8080-exec-8] com.sony.mts.base.BaseController         : --------------------部门信息删除成功--------------------
+2021-12-15 09:53:56.165 INFO  --- [nio-8080-exec-8] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-15 09:53:56.165 DEBUG --- [nio-8080-exec-8] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-15 09:53:56.165 DEBUG --- [nio-8080-exec-8] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-15 09:53:56.167 DEBUG --- [nio-8080-exec-8] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-15 09:53:56.167 DEBUG --- [nio-8080-exec-8] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ? 
+2021-12-15 09:53:56.167 DEBUG --- [nio-8080-exec-8] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 5(Integer)
+2021-12-15 09:53:56.169 DEBUG --- [nio-8080-exec-8] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 5
+2021-12-15 09:53:56.169 INFO  --- [nio-8080-exec-8] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-15 09:54:42.055 INFO  --- [nio-8080-exec-2] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectAllDept
+2021-12-15 09:54:42.058 INFO  --- [nio-8080-exec-2] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-15 09:54:42.059 DEBUG --- [nio-8080-exec-2] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-15 09:54:42.059 DEBUG --- [nio-8080-exec-2] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-15 09:54:42.064 DEBUG --- [nio-8080-exec-2] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-15 09:54:42.065 DEBUG --- [nio-8080-exec-2] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ?, ? 
+2021-12-15 09:54:42.065 DEBUG --- [nio-8080-exec-2] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 5(Integer), 5(Integer)
+2021-12-15 09:54:42.066 DEBUG --- [nio-8080-exec-2] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 5
+2021-12-15 09:54:42.066 INFO  --- [nio-8080-exec-2] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-15 09:54:43.457 INFO  --- [nio-8080-exec-6] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectAllDept
+2021-12-15 09:54:43.460 INFO  --- [nio-8080-exec-6] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-15 09:54:43.461 DEBUG --- [nio-8080-exec-6] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-15 09:54:43.461 DEBUG --- [nio-8080-exec-6] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-15 09:54:43.465 DEBUG --- [nio-8080-exec-6] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-15 09:54:43.465 DEBUG --- [nio-8080-exec-6] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ?, ? 
+2021-12-15 09:54:43.465 DEBUG --- [nio-8080-exec-6] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 10(Integer), 5(Integer)
+2021-12-15 09:54:43.467 DEBUG --- [nio-8080-exec-6] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 1
+2021-12-15 09:54:43.467 INFO  --- [nio-8080-exec-6] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-15 09:54:44.744 INFO  --- [nio-8080-exec-1] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectAllDept
+2021-12-15 09:54:44.748 INFO  --- [nio-8080-exec-1] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-15 09:54:44.749 DEBUG --- [nio-8080-exec-1] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-15 09:54:44.749 DEBUG --- [nio-8080-exec-1] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-15 09:54:44.753 DEBUG --- [nio-8080-exec-1] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-15 09:54:44.753 DEBUG --- [nio-8080-exec-1] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ?, ? 
+2021-12-15 09:54:44.754 DEBUG --- [nio-8080-exec-1] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 5(Integer), 5(Integer)
+2021-12-15 09:54:44.756 DEBUG --- [nio-8080-exec-1] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 5
+2021-12-15 09:54:44.756 INFO  --- [nio-8080-exec-1] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-15 09:54:45.625 INFO  --- [nio-8080-exec-5] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectAllDept
+2021-12-15 09:54:45.628 INFO  --- [nio-8080-exec-5] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-15 09:54:45.629 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-15 09:54:45.629 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-15 09:54:45.633 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-15 09:54:45.633 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ? 
+2021-12-15 09:54:45.633 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 5(Integer)
+2021-12-15 09:54:45.635 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 5
+2021-12-15 09:54:45.635 INFO  --- [nio-8080-exec-5] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-15 09:54:56.988 INFO  --- [nio-8080-exec-9] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectByInput
+2021-12-15 09:54:56.997 INFO  --- [nio-8080-exec-9] com.sony.mts.base.BaseController         : --------------------模糊查询部门信息中……--------------------
+2021-12-15 09:54:56.999 DEBUG --- [nio-8080-exec-9] c.s.m.d.D.selectDeptByInput_COUNT        : ==>  Preparing: SELECT count(0) FROM Department_info WHERE dep_num LIKE CONCAT('%', ?, '%') OR dep_name LIKE CONCAT('%', ?, '%') OR chairman_num LIKE CONCAT('%', ?, '%') 
+2021-12-15 09:54:56.999 DEBUG --- [nio-8080-exec-9] c.s.m.d.D.selectDeptByInput_COUNT        : ==> Parameters: 121504(String), 121504(String), 121504(String)
+2021-12-15 09:54:57.001 DEBUG --- [nio-8080-exec-9] c.s.m.d.D.selectDeptByInput_COUNT        : <==      Total: 1
+2021-12-15 09:54:57.001 INFO  --- [nio-8080-exec-9] com.sony.mts.base.BaseController         : --------------------根据用户输入的值没有搜索到结果--------------------
+2021-12-15 09:54:59.722 INFO  --- [nio-8080-exec-3] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/emp/admin/homePage
+2021-12-15 09:55:07.749 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 5608 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 09:55:07.749 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 09:55:08.121 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.418 seconds (JVM running for 306.28)
+2021-12-15 09:55:15.143 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 5608 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 09:55:15.143 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 09:55:15.529 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.438 seconds (JVM running for 313.687)
+2021-12-15 09:55:17.407 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 5608 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 09:55:17.407 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 09:55:17.792 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.432 seconds (JVM running for 315.954)
+2021-12-15 09:55:20.730 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 5608 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 09:55:20.730 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 09:55:21.169 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.489 seconds (JVM running for 319.329)
+2021-12-15 09:55:38.505 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 5608 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 09:55:38.505 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 09:55:38.909 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.481 seconds (JVM running for 337.059)
+2021-12-15 09:55:41.816 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 5608 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 09:55:41.816 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 09:55:42.271 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.505 seconds (JVM running for 340.427)
+2021-12-15 09:55:44.141 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 5608 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 09:55:44.141 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 09:55:44.576 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.487 seconds (JVM running for 342.723)
+2021-12-15 09:55:47.540 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 5608 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 09:55:47.540 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 09:55:47.974 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.496 seconds (JVM running for 346.128)
+2021-12-15 09:57:17.346 INFO  --- [nio-8080-exec-1] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/pos/selectAllPos
+2021-12-15 09:57:19.907 DEBUG --- [nio-8080-exec-4] c.s.mts.dao.EmployeeMapper.checkEmployee : ==>  Preparing: select * from Employee_info where emp_id=? and pass_wd=? 
+2021-12-15 09:57:19.907 DEBUG --- [nio-8080-exec-4] c.s.mts.dao.EmployeeMapper.checkEmployee : ==> Parameters: admin(String), admin(String)
+2021-12-15 09:57:19.909 DEBUG --- [nio-8080-exec-4] c.s.mts.dao.EmployeeMapper.checkEmployee : <==      Total: 1
+2021-12-15 09:57:19.910 INFO  --- [nio-8080-exec-4] com.sony.mts.base.BaseController         : --------------------项目经理登入--------------------
+2021-12-15 09:59:33.429 INFO  --- [nio-8080-exec-9] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/emp/selectAllEmp
+2021-12-15 09:59:33.438 INFO  --- [nio-8080-exec-9] com.sony.mts.base.BaseController         : --------------------开始获取全部员工信息--------------------
+2021-12-15 09:59:33.459 DEBUG --- [nio-8080-exec-9] c.s.m.d.E.selectEmpDeptPos_COUNT         : ==>  Preparing: SELECT count(0) FROM Employee_info AS emp JOIN Department_info AS dept ON (emp.dep_num = dept.dep_num) JOIN Position_info AS pos ON (emp.pos_num = pos.pos_num) 
+2021-12-15 09:59:33.459 DEBUG --- [nio-8080-exec-9] c.s.m.d.E.selectEmpDeptPos_COUNT         : ==> Parameters: 
+2021-12-15 09:59:33.462 DEBUG --- [nio-8080-exec-9] c.s.m.d.E.selectEmpDeptPos_COUNT         : <==      Total: 1
+2021-12-15 09:59:33.462 DEBUG --- [nio-8080-exec-9] c.s.m.d.EmployeeMapper.selectEmpDeptPos  : ==>  Preparing: select emp.*,pos.pos_num,pos.pos_name,dept.dep_num,dept.dep_name from Employee_info as emp join Department_info as dept on (emp.dep_num=dept.dep_num) join Position_info as pos on (emp.pos_num=pos.pos_num) order by emp.pos_num LIMIT ? 
+2021-12-15 09:59:33.462 DEBUG --- [nio-8080-exec-9] c.s.m.d.EmployeeMapper.selectEmpDeptPos  : ==> Parameters: 5(Integer)
+2021-12-15 09:59:33.465 DEBUG --- [nio-8080-exec-9] c.s.m.d.EmployeeMapper.selectEmpDeptPos  : <==      Total: 5
+2021-12-15 09:59:33.466 INFO  --- [nio-8080-exec-9] com.sony.mts.base.BaseController         : --------------------全部员工信息获取成功--------------------
+2021-12-15 10:13:04.426 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 13852 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 10:13:04.428 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 10:13:04.448 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 3396 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 10:13:04.451 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 10:13:07.485 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 3.417 seconds (JVM running for 6.089)
+2021-12-15 10:13:24.020 DEBUG --- [nio-8080-exec-5] c.s.mts.dao.EmployeeMapper.checkEmployee : ==>  Preparing: select * from Employee_info where emp_id=? and pass_wd=? 
+2021-12-15 10:13:24.036 DEBUG --- [nio-8080-exec-5] c.s.mts.dao.EmployeeMapper.checkEmployee : ==> Parameters: admin(String), admin(String)
+2021-12-15 10:13:24.051 DEBUG --- [nio-8080-exec-5] c.s.mts.dao.EmployeeMapper.checkEmployee : <==      Total: 1
+2021-12-15 10:13:24.055 INFO  --- [nio-8080-exec-5] com.sony.mts.base.BaseController         : --------------------项目经理登入--------------------
+2021-12-15 10:13:28.915 INFO  --- [nio-8080-exec-8] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectAllDept
+2021-12-15 10:13:28.926 INFO  --- [nio-8080-exec-8] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-15 10:13:28.943 DEBUG --- [nio-8080-exec-8] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-15 10:13:28.944 DEBUG --- [nio-8080-exec-8] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-15 10:13:28.948 DEBUG --- [nio-8080-exec-8] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-15 10:13:28.949 DEBUG --- [nio-8080-exec-8] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ? 
+2021-12-15 10:13:28.950 DEBUG --- [nio-8080-exec-8] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 5(Integer)
+2021-12-15 10:13:28.951 DEBUG --- [nio-8080-exec-8] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 5
+2021-12-15 10:13:28.952 INFO  --- [nio-8080-exec-8] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-15 10:14:10.609 INFO  --- [nio-8080-exec-2] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/emp/admin/homePage
+2021-12-15 10:14:11.584 INFO  --- [nio-8080-exec-5] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/emp/selectAllEmp
+2021-12-15 10:14:11.588 INFO  --- [nio-8080-exec-5] com.sony.mts.base.BaseController         : --------------------开始获取全部员工信息--------------------
+2021-12-15 10:14:11.593 DEBUG --- [nio-8080-exec-5] c.s.m.d.E.selectEmpDeptPos_COUNT         : ==>  Preparing: SELECT count(0) FROM Employee_info AS emp JOIN Department_info AS dept ON (emp.dep_num = dept.dep_num) JOIN Position_info AS pos ON (emp.pos_num = pos.pos_num) 
+2021-12-15 10:14:11.594 DEBUG --- [nio-8080-exec-5] c.s.m.d.E.selectEmpDeptPos_COUNT         : ==> Parameters: 
+2021-12-15 10:14:11.597 DEBUG --- [nio-8080-exec-5] c.s.m.d.E.selectEmpDeptPos_COUNT         : <==      Total: 1
+2021-12-15 10:14:11.597 DEBUG --- [nio-8080-exec-5] c.s.m.d.EmployeeMapper.selectEmpDeptPos  : ==>  Preparing: select emp.*,pos.pos_num,pos.pos_name,dept.dep_num,dept.dep_name from Employee_info as emp join Department_info as dept on (emp.dep_num=dept.dep_num) join Position_info as pos on (emp.pos_num=pos.pos_num) order by emp.pos_num LIMIT ? 
+2021-12-15 10:14:11.597 DEBUG --- [nio-8080-exec-5] c.s.m.d.EmployeeMapper.selectEmpDeptPos  : ==> Parameters: 5(Integer)
+2021-12-15 10:14:11.600 DEBUG --- [nio-8080-exec-5] c.s.m.d.EmployeeMapper.selectEmpDeptPos  : <==      Total: 5
+2021-12-15 10:14:11.601 INFO  --- [nio-8080-exec-5] com.sony.mts.base.BaseController         : --------------------全部员工信息获取成功--------------------
+2021-12-15 10:14:12.161 INFO  --- [io-8080-exec-10] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/emp/admin/homePage
+2021-12-15 10:14:13.008 INFO  --- [nio-8080-exec-2] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/pro/selectAllPro
+2021-12-15 10:14:13.018 INFO  --- [nio-8080-exec-2] com.sony.mts.base.BaseController         : --------------------获取全部项目信息中……--------------------
+2021-12-15 10:14:13.019 DEBUG --- [nio-8080-exec-2] c.s.m.d.ProjectMapper.selectAllPro_COUNT : ==>  Preparing: SELECT count(0) FROM Project_info 
+2021-12-15 10:14:13.019 DEBUG --- [nio-8080-exec-2] c.s.m.d.ProjectMapper.selectAllPro_COUNT : ==> Parameters: 
+2021-12-15 10:14:13.022 DEBUG --- [nio-8080-exec-2] c.s.m.d.ProjectMapper.selectAllPro_COUNT : <==      Total: 1
+2021-12-15 10:14:13.023 DEBUG --- [nio-8080-exec-2] c.s.mts.dao.ProjectMapper.selectAllPro   : ==>  Preparing: select pro_num, pro_name from Project_info LIMIT ? 
+2021-12-15 10:14:13.023 DEBUG --- [nio-8080-exec-2] c.s.mts.dao.ProjectMapper.selectAllPro   : ==> Parameters: 5(Integer)
+2021-12-15 10:14:13.024 DEBUG --- [nio-8080-exec-2] c.s.mts.dao.ProjectMapper.selectAllPro   : <==      Total: 5
+2021-12-15 10:14:13.025 INFO  --- [nio-8080-exec-2] com.sony.mts.base.BaseController         : --------------------项目信息获取成功--------------------
+2021-12-15 10:14:13.584 INFO  --- [nio-8080-exec-6] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/emp/admin/homePage
+2021-12-15 10:14:14.344 INFO  --- [io-8080-exec-10] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/epr/selectAllTask
+2021-12-15 10:14:14.351 INFO  --- [io-8080-exec-10] com.sony.mts.base.BaseController         : --------------------全部任务信息取得中--------------------
+2021-12-15 10:14:14.352 DEBUG --- [io-8080-exec-10] c.s.m.d.E.selectAllTask_COUNT            : ==>  Preparing: SELECT count(0) FROM EmpProjectRela 
+2021-12-15 10:14:14.353 DEBUG --- [io-8080-exec-10] c.s.m.d.E.selectAllTask_COUNT            : ==> Parameters: 
+2021-12-15 10:14:14.356 DEBUG --- [io-8080-exec-10] c.s.m.d.E.selectAllTask_COUNT            : <==      Total: 1
+2021-12-15 10:14:14.356 DEBUG --- [io-8080-exec-10] c.s.m.d.E.selectAllTask                  : ==>  Preparing: select task_id, emp_id, pro_num from EmpProjectRela order by emp_id LIMIT ? 
+2021-12-15 10:14:14.356 DEBUG --- [io-8080-exec-10] c.s.m.d.E.selectAllTask                  : ==> Parameters: 5(Integer)
+2021-12-15 10:14:14.358 DEBUG --- [io-8080-exec-10] c.s.m.d.E.selectAllTask                  : <==      Total: 5
+2021-12-15 10:14:14.358 INFO  --- [io-8080-exec-10] com.sony.mts.base.BaseController         : --------------------任务信息已取得--------------------
+2021-12-15 10:14:14.832 INFO  --- [nio-8080-exec-3] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/emp/admin/homePage
+2021-12-15 10:14:15.592 INFO  --- [nio-8080-exec-6] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/pos/selectAllPos
+2021-12-15 10:14:15.598 INFO  --- [nio-8080-exec-6] com.sony.mts.base.BaseController         : --------------------职位信息取得中……--------------------
+2021-12-15 10:14:15.599 DEBUG --- [nio-8080-exec-6] c.s.m.d.P.selectAllPos_COUNT             : ==>  Preparing: SELECT count(0) FROM Position_info 
+2021-12-15 10:14:15.599 DEBUG --- [nio-8080-exec-6] c.s.m.d.P.selectAllPos_COUNT             : ==> Parameters: 
+2021-12-15 10:14:15.602 DEBUG --- [nio-8080-exec-6] c.s.m.d.P.selectAllPos_COUNT             : <==      Total: 1
+2021-12-15 10:14:15.602 DEBUG --- [nio-8080-exec-6] c.s.mts.dao.PositionMapper.selectAllPos  : ==>  Preparing: select pos_num, dep_num, pos_name from Position_info LIMIT ? 
+2021-12-15 10:14:15.603 DEBUG --- [nio-8080-exec-6] c.s.mts.dao.PositionMapper.selectAllPos  : ==> Parameters: 10(Integer)
+2021-12-15 10:14:15.605 DEBUG --- [nio-8080-exec-6] c.s.mts.dao.PositionMapper.selectAllPos  : <==      Total: 4
+2021-12-15 10:14:15.605 INFO  --- [nio-8080-exec-6] com.sony.mts.base.BaseController         : --------------------职位信息已取得--------------------
+2021-12-15 10:14:16.144 INFO  --- [nio-8080-exec-9] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/emp/admin/homePage
+2021-12-15 10:14:28.416 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 10344 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 10:14:28.418 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 10:14:29.996 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 1.862 seconds (JVM running for 2.648)
+2021-12-15 10:14:34.349 DEBUG --- [nio-8080-exec-4] c.s.mts.dao.EmployeeMapper.checkEmployee : ==>  Preparing: select * from Employee_info where emp_id=? and pass_wd=? 
+2021-12-15 10:14:34.366 DEBUG --- [nio-8080-exec-4] c.s.mts.dao.EmployeeMapper.checkEmployee : ==> Parameters: admin(String), admin(String)
+2021-12-15 10:14:34.382 DEBUG --- [nio-8080-exec-4] c.s.mts.dao.EmployeeMapper.checkEmployee : <==      Total: 1
+2021-12-15 10:14:34.386 INFO  --- [nio-8080-exec-4] com.sony.mts.base.BaseController         : --------------------项目经理登入--------------------
+2021-12-15 10:14:35.779 INFO  --- [nio-8080-exec-7] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectAllDept
+2021-12-15 10:14:35.789 INFO  --- [nio-8080-exec-7] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-15 10:14:35.808 DEBUG --- [nio-8080-exec-7] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-15 10:14:35.808 DEBUG --- [nio-8080-exec-7] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-15 10:14:35.812 DEBUG --- [nio-8080-exec-7] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-15 10:14:35.813 DEBUG --- [nio-8080-exec-7] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ? 
+2021-12-15 10:14:35.814 DEBUG --- [nio-8080-exec-7] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 5(Integer)
+2021-12-15 10:14:35.815 DEBUG --- [nio-8080-exec-7] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 5
+2021-12-15 10:14:35.816 INFO  --- [nio-8080-exec-7] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-15 10:14:48.192 INFO  --- [nio-8080-exec-1] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/emp/admin/homePage
+2021-12-15 10:14:49.208 INFO  --- [nio-8080-exec-4] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/emp/selectAllEmp
+2021-12-15 10:14:49.212 INFO  --- [nio-8080-exec-4] com.sony.mts.base.BaseController         : --------------------开始获取全部员工信息--------------------
+2021-12-15 10:14:49.218 DEBUG --- [nio-8080-exec-4] c.s.m.d.E.selectEmpDeptPos_COUNT         : ==>  Preparing: SELECT count(0) FROM Employee_info AS emp JOIN Department_info AS dept ON (emp.dep_num = dept.dep_num) JOIN Position_info AS pos ON (emp.pos_num = pos.pos_num) 
+2021-12-15 10:14:49.218 DEBUG --- [nio-8080-exec-4] c.s.m.d.E.selectEmpDeptPos_COUNT         : ==> Parameters: 
+2021-12-15 10:14:49.219 DEBUG --- [nio-8080-exec-4] c.s.m.d.E.selectEmpDeptPos_COUNT         : <==      Total: 1
+2021-12-15 10:14:49.219 DEBUG --- [nio-8080-exec-4] c.s.m.d.EmployeeMapper.selectEmpDeptPos  : ==>  Preparing: select emp.*,pos.pos_num,pos.pos_name,dept.dep_num,dept.dep_name from Employee_info as emp join Department_info as dept on (emp.dep_num=dept.dep_num) join Position_info as pos on (emp.pos_num=pos.pos_num) order by emp.pos_num LIMIT ? 
+2021-12-15 10:14:49.220 DEBUG --- [nio-8080-exec-4] c.s.m.d.EmployeeMapper.selectEmpDeptPos  : ==> Parameters: 5(Integer)
+2021-12-15 10:14:49.222 DEBUG --- [nio-8080-exec-4] c.s.m.d.EmployeeMapper.selectEmpDeptPos  : <==      Total: 5
+2021-12-15 10:14:49.223 INFO  --- [nio-8080-exec-4] com.sony.mts.base.BaseController         : --------------------全部员工信息获取成功--------------------
+2021-12-15 10:15:14.473 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 10344 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 10:15:14.474 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 10:15:15.029 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.602 seconds (JVM running for 47.682)
+2021-12-15 10:15:15.284 DEBUG --- [nio-8080-exec-1] c.s.mts.dao.EmployeeMapper.checkEmployee : ==>  Preparing: select * from Employee_info where emp_id=? and pass_wd=? 
+2021-12-15 10:15:15.285 DEBUG --- [nio-8080-exec-1] c.s.mts.dao.EmployeeMapper.checkEmployee : ==> Parameters: admin(String), admin(String)
+2021-12-15 10:15:15.288 DEBUG --- [nio-8080-exec-1] c.s.mts.dao.EmployeeMapper.checkEmployee : <==      Total: 1
+2021-12-15 10:15:15.289 INFO  --- [nio-8080-exec-1] com.sony.mts.base.BaseController         : --------------------项目经理登入--------------------
+2021-12-15 10:15:20.409 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 10344 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 10:15:20.409 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 10:15:20.863 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.509 seconds (JVM running for 53.516)
+2021-12-15 10:15:20.963 INFO  --- [nio-8080-exec-1] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/toInsertDept
+2021-12-15 10:15:23.097 DEBUG --- [nio-8080-exec-4] c.s.mts.dao.EmployeeMapper.checkEmployee : ==>  Preparing: select * from Employee_info where emp_id=? and pass_wd=? 
+2021-12-15 10:15:23.098 DEBUG --- [nio-8080-exec-4] c.s.mts.dao.EmployeeMapper.checkEmployee : ==> Parameters: admin(String), admin(String)
+2021-12-15 10:15:23.100 DEBUG --- [nio-8080-exec-4] c.s.mts.dao.EmployeeMapper.checkEmployee : <==      Total: 1
+2021-12-15 10:15:23.100 INFO  --- [nio-8080-exec-4] com.sony.mts.base.BaseController         : --------------------项目经理登入--------------------
+2021-12-15 10:15:25.137 INFO  --- [nio-8080-exec-7] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/toInsertDept
+2021-12-15 10:15:25.145 INFO  --- [nio-8080-exec-7] com.sony.mts.base.BaseController         : --------------------开始追加部门信息--------------------
+2021-12-15 10:15:30.708 INFO  --- [nio-8080-exec-1] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/insertDept
+2021-12-15 10:15:30.718 DEBUG --- [nio-8080-exec-1] c.s.m.d.DepartmentMapper.selectByDepName : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info where dep_name = ? 
+2021-12-15 10:15:30.718 DEBUG --- [nio-8080-exec-1] c.s.m.d.DepartmentMapper.selectByDepName : ==> Parameters: 121504(String)
+2021-12-15 10:15:30.719 DEBUG --- [nio-8080-exec-1] c.s.m.d.DepartmentMapper.selectByDepName : <==      Total: 0
+2021-12-15 10:15:30.720 DEBUG --- [nio-8080-exec-1] c.s.m.d.D.selectByPrimaryKey             : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info where dep_num = ? 
+2021-12-15 10:15:30.720 DEBUG --- [nio-8080-exec-1] c.s.m.d.D.selectByPrimaryKey             : ==> Parameters: 121504(String)
+2021-12-15 10:15:30.723 DEBUG --- [nio-8080-exec-1] c.s.m.d.D.selectByPrimaryKey             : <==      Total: 0
+2021-12-15 10:15:30.723 DEBUG --- [nio-8080-exec-1] com.sony.mts.dao.DepartmentMapper.insert : ==>  Preparing: insert into Department_info (dep_num, dep_name, chairman_num) values (?, ?, ?) 
+2021-12-15 10:15:30.724 DEBUG --- [nio-8080-exec-1] com.sony.mts.dao.DepartmentMapper.insert : ==> Parameters: 121504(String), 121504(String), 121504(String)
+2021-12-15 10:15:30.727 DEBUG --- [nio-8080-exec-1] com.sony.mts.dao.DepartmentMapper.insert : <==    Updates: 1
+2021-12-15 10:15:32.696 INFO  --- [nio-8080-exec-5] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectAllDept
+2021-12-15 10:15:32.699 INFO  --- [nio-8080-exec-5] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-15 10:15:32.700 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-15 10:15:32.700 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-15 10:15:32.702 DEBUG --- [nio-8080-exec-5] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-15 10:15:32.703 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ? 
+2021-12-15 10:15:32.703 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 5(Integer)
+2021-12-15 10:15:32.704 DEBUG --- [nio-8080-exec-5] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 5
+2021-12-15 10:15:32.705 INFO  --- [nio-8080-exec-5] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-15 10:16:11.833 INFO  --- [nio-8080-exec-9] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/emp/admin/homePage
+2021-12-15 10:16:13.577 INFO  --- [nio-8080-exec-2] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/emp/selectAllEmp
+2021-12-15 10:16:13.581 INFO  --- [nio-8080-exec-2] com.sony.mts.base.BaseController         : --------------------开始获取全部员工信息--------------------
+2021-12-15 10:16:13.583 DEBUG --- [nio-8080-exec-2] c.s.m.d.E.selectEmpDeptPos_COUNT         : ==>  Preparing: SELECT count(0) FROM Employee_info AS emp JOIN Department_info AS dept ON (emp.dep_num = dept.dep_num) JOIN Position_info AS pos ON (emp.pos_num = pos.pos_num) 
+2021-12-15 10:16:13.583 DEBUG --- [nio-8080-exec-2] c.s.m.d.E.selectEmpDeptPos_COUNT         : ==> Parameters: 
+2021-12-15 10:16:13.585 DEBUG --- [nio-8080-exec-2] c.s.m.d.E.selectEmpDeptPos_COUNT         : <==      Total: 1
+2021-12-15 10:16:13.585 DEBUG --- [nio-8080-exec-2] c.s.m.d.EmployeeMapper.selectEmpDeptPos  : ==>  Preparing: select emp.*,pos.pos_num,pos.pos_name,dept.dep_num,dept.dep_name from Employee_info as emp join Department_info as dept on (emp.dep_num=dept.dep_num) join Position_info as pos on (emp.pos_num=pos.pos_num) order by emp.pos_num LIMIT ? 
+2021-12-15 10:16:13.586 DEBUG --- [nio-8080-exec-2] c.s.m.d.EmployeeMapper.selectEmpDeptPos  : ==> Parameters: 5(Integer)
+2021-12-15 10:16:13.594 DEBUG --- [nio-8080-exec-2] c.s.m.d.EmployeeMapper.selectEmpDeptPos  : <==      Total: 5
+2021-12-15 10:16:13.595 INFO  --- [nio-8080-exec-2] com.sony.mts.base.BaseController         : --------------------全部员工信息获取成功--------------------
+2021-12-15 11:31:23.620 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 2640 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 11:31:23.620 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 11:31:25.258 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 1.955 seconds (JVM running for 2.79)
+2021-12-15 11:31:28.567 DEBUG --- [nio-8080-exec-5] c.s.mts.dao.EmployeeMapper.checkEmployee : ==>  Preparing: select * from Employee_info where emp_id=? and pass_wd=? 
+2021-12-15 11:31:28.583 DEBUG --- [nio-8080-exec-5] c.s.mts.dao.EmployeeMapper.checkEmployee : ==> Parameters: admin(String), admin(String)
+2021-12-15 11:31:28.598 DEBUG --- [nio-8080-exec-5] c.s.mts.dao.EmployeeMapper.checkEmployee : <==      Total: 1
+2021-12-15 11:31:28.602 INFO  --- [nio-8080-exec-5] com.sony.mts.base.BaseController         : --------------------项目经理登入--------------------
+2021-12-15 11:31:29.961 INFO  --- [nio-8080-exec-8] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/toInsertDept
+2021-12-15 11:31:29.963 INFO  --- [nio-8080-exec-8] com.sony.mts.base.BaseController         : --------------------开始追加部门信息--------------------
+2021-12-15 11:31:35.207 INFO  --- [nio-8080-exec-2] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/insertDept
+2021-12-15 11:31:35.224 DEBUG --- [nio-8080-exec-2] c.s.m.d.DepartmentMapper.selectByDepName : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info where dep_name = ? 
+2021-12-15 11:31:35.224 DEBUG --- [nio-8080-exec-2] c.s.m.d.DepartmentMapper.selectByDepName : ==> Parameters: 121501(String)
+2021-12-15 11:31:35.227 DEBUG --- [nio-8080-exec-2] c.s.m.d.DepartmentMapper.selectByDepName : <==      Total: 0
+2021-12-15 11:31:35.232 DEBUG --- [nio-8080-exec-2] c.s.m.d.D.selectByPrimaryKey             : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info where dep_num = ? 
+2021-12-15 11:31:35.233 DEBUG --- [nio-8080-exec-2] c.s.m.d.D.selectByPrimaryKey             : ==> Parameters: 121501(String)
+2021-12-15 11:31:35.234 DEBUG --- [nio-8080-exec-2] c.s.m.d.D.selectByPrimaryKey             : <==      Total: 0
+2021-12-15 11:31:35.237 DEBUG --- [nio-8080-exec-2] com.sony.mts.dao.DepartmentMapper.insert : ==>  Preparing: insert into Department_info (dep_num, dep_name, chairman_num) values (?, ?, ?) 
+2021-12-15 11:31:35.238 DEBUG --- [nio-8080-exec-2] com.sony.mts.dao.DepartmentMapper.insert : ==> Parameters: 121501(String), 121501(String), 121501(String)
+2021-12-15 11:31:35.240 DEBUG --- [nio-8080-exec-2] com.sony.mts.dao.DepartmentMapper.insert : <==    Updates: 1
+2021-12-15 11:31:37.462 INFO  --- [nio-8080-exec-6] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectAllDept
+2021-12-15 11:31:37.467 INFO  --- [nio-8080-exec-6] com.sony.mts.base.BaseController         : --------------------取得所有部门信息中……--------------------
+2021-12-15 11:31:37.489 DEBUG --- [nio-8080-exec-6] c.s.m.d.D.selectAllDept_COUNT            : ==>  Preparing: SELECT count(0) FROM Department_info 
+2021-12-15 11:31:37.489 DEBUG --- [nio-8080-exec-6] c.s.m.d.D.selectAllDept_COUNT            : ==> Parameters: 
+2021-12-15 11:31:37.494 DEBUG --- [nio-8080-exec-6] c.s.m.d.D.selectAllDept_COUNT            : <==      Total: 1
+2021-12-15 11:31:37.495 DEBUG --- [nio-8080-exec-6] c.s.m.dao.DepartmentMapper.selectAllDept : ==>  Preparing: select dep_num, dep_name, chairman_num from Department_info LIMIT ? 
+2021-12-15 11:31:37.495 DEBUG --- [nio-8080-exec-6] c.s.m.dao.DepartmentMapper.selectAllDept : ==> Parameters: 5(Integer)
+2021-12-15 11:31:37.497 DEBUG --- [nio-8080-exec-6] c.s.m.dao.DepartmentMapper.selectAllDept : <==      Total: 5
+2021-12-15 11:31:37.522 INFO  --- [nio-8080-exec-6] com.sony.mts.base.BaseController         : --------------------部门信息获取成功--------------------
+2021-12-15 11:31:39.057 INFO  --- [io-8080-exec-10] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/dept/selectByInput
+2021-12-15 11:31:39.059 INFO  --- [io-8080-exec-10] com.sony.mts.base.BaseController         : --------------------模糊查询部门信息中……--------------------
+2021-12-15 11:31:39.066 DEBUG --- [io-8080-exec-10] c.s.m.d.D.selectDeptByInput_COUNT        : ==>  Preparing: SELECT count(0) FROM Department_info WHERE dep_num LIKE CONCAT('%', ?, '%') OR dep_name LIKE CONCAT('%', ?, '%') OR chairman_num LIKE CONCAT('%', ?, '%') 
+2021-12-15 11:31:39.066 DEBUG --- [io-8080-exec-10] c.s.m.d.D.selectDeptByInput_COUNT        : ==> Parameters: 121501(String), 121501(String), 121501(String)
+2021-12-15 11:31:39.068 DEBUG --- [io-8080-exec-10] c.s.m.d.D.selectDeptByInput_COUNT        : <==      Total: 1
+2021-12-15 11:31:39.070 INFO  --- [io-8080-exec-10] com.sony.mts.base.BaseController         : --------------------根据用户输入的值没有搜索到结果--------------------
+2021-12-15 12:30:47.717 INFO  --- [nio-8080-exec-6] c.sony.mts.interceptor.LoginInterceptor  : preHandle拦截的请求路径是/emp/admin/homePage
+2021-12-15 12:31:01.531 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 2640 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 12:31:01.531 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 12:31:02.055 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.621 seconds (JVM running for 3579.533)
+2021-12-15 12:31:09.972 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 2640 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 12:31:09.988 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 12:31:10.427 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.509 seconds (JVM running for 3587.915)
+2021-12-15 12:31:26.356 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 2640 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 12:31:26.356 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 12:31:26.826 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.521 seconds (JVM running for 3604.304)
+2021-12-15 12:31:35.723 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 2640 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 12:31:35.723 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 12:31:36.169 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.515 seconds (JVM running for 3613.654)
+2021-12-15 12:31:39.026 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 2640 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 12:31:39.026 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 12:31:39.579 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.6 seconds (JVM running for 3617.059)
+2021-12-15 12:31:53.913 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 2640 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 12:31:53.913 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 12:31:54.346 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.487 seconds (JVM running for 3631.829)
+2021-12-15 12:31:57.172 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 2640 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 12:31:57.172 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 12:31:57.588 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.475 seconds (JVM running for 3635.07)
+2021-12-15 12:32:00.522 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 2640 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 12:32:00.522 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 12:32:01.076 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.608 seconds (JVM running for 3638.551)
+2021-12-15 12:32:02.937 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 2640 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 12:32:02.937 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 12:32:03.494 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.599 seconds (JVM running for 3640.973)
+2021-12-15 12:32:07.320 INFO  --- [  restartedMain] com.sony.mts.App                         : Starting App on DL5109U12433D with PID 2640 (D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts\target\classes started by 5109u12433 in D:\ProgramFiles\eclipse-jee-2018-12-R-win32-x86_64\wordspace\mts)
+2021-12-15 12:32:07.320 INFO  --- [  restartedMain] com.sony.mts.App                         : No active profile set, falling back to default profiles: default
+2021-12-15 12:32:07.721 INFO  --- [  restartedMain] com.sony.mts.App                         : Started App in 0.454 seconds (JVM running for 3645.195)

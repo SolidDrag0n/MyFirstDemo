@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title th:text="'status:'+${status}"></title>
+<link href="/static/css/error.css" rel="stylesheet" type="text/css" />
+</head>
+<body bgcolor="#494949">
+	<div class="dialog">
+		<h1>We're sorry, but something went wrong.</h1>
+		<p>We've been notified about this issue and we'll take a look at
+			it shortly.</p>
+		<p th:text="${path}"></p>
+		<p th:text="${#dates.format(timestamp,'yyyy-MM-dd HH:mm:ss')}"></p>
+		<p th:text="${error}"></p>
+		<p th:text="${message}"></p>
+		<p>
+			<a th:href="@{/login/logout}">Exit</a>
+		</p>
+	</div>
+</body>
+</html>

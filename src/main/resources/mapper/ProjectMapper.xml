@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sony.mts.dao.ProjectMapper">
+
+  <resultMap id="BaseResultMap" type="com.sony.mts.entity.Project">
+    <id column="pro_num" jdbcType="CHAR" property="proNum" />
+    <result column="pro_name" jdbcType="VARCHAR" property="proName" />
+  </resultMap>
+  
+  <sql id="Base_Column_List">
+    pro_num, pro_name
+  </sql>
+  
+  <!-- 项目信息取得 -->
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from Project_info
+    where pro_num = #{proNum,jdbcType=CHAR}
+  </select>
+  
+  <!-- 项目信息删除 -->
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from Project_info
+    where pro_num = #{proNum,jdbcType=CHAR}
+  </delete>
+  
+  <!-- 项目信息追加 -->
+  <insert id="insert" parameterType="com.sony.mts.entity.Project">
+    insert into Project_info (pro_num, pro_name)
+    values (#{proNum,jdbcType=CHAR}, #{proName,jdbcType=VARCHAR})
+  </insert>
+ 
+ <!-- 项目信息更新 --> 
+  <update id="updateByPrimaryKey" parameterType="com.sony.mts.entity.Project">
+    update Project_info
+    set pro_name = #{proName,jdbcType=VARCHAR}
+    where pro_num = #{proNum,jdbcType=CHAR}
+  </update>
+  
+  <!-- 项目信息部分更新 -->
+  <update id="updateByPrimaryKeySelective" parameterType="com.sony.mts.entity.Project">
+    update Project_info
+    <set>
+    	<if test="proName != null"> pro_name = #{proName,jdbcType=VARCHAR},</if>
+    </set>
+	where pro_num = #{proNum,jdbcType=CHAR}
+  </update>
+  
+  <!-- 全部项目信息取得 -->
+  <select id="selectAllPro" parameterType="com.sony.mts.entity.Project" resultMap="BaseResultMap">
+    select
+  <include refid="Base_Column_List" />
+    from Project_info
+  </select>
+  
+  <!-- 特定项目信息取得 -->
+   <select id="selectByProName" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+   <include refid="Base_Column_List" />
+    from Project_info
+    where pro_name = #{proName,jdbcType=CHAR}
+  </select>
+  
+</mapper>

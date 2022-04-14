@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>编辑员工信息</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet"
+	href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="/static/css/homepage.css" rel="stylesheet" type="text/css" />
+<script
+	src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script
+	src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="/static/js/protectElements.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="panel panel-default" style="width: 90%; margin-left: 5%">
+
+		<div class="panel-heading">
+			<h3 class="panel-title" style="text-align: center">编辑员工信息</h3>
+			<a th:href="@{'/emp/admin/homePage'}" style="float: right;"><button
+					class="glyphicon glyphicon-log-in">返回</button></a> <a
+				th:href="@{'/emp/selectAllEmp'}" style="float: right;"><button
+					class="glyphicon glyphicon-log-in">员工信息</button></a>
+		</div>
+
+		<div class="panel-body">
+
+			<form action="/emp/insertEmp" method="post"
+				th:if="${empId}!=null?'false':'true'">
+
+				<table class="table table-hover" style="text-align: center">
+
+					<thead>
+						<tr>
+							<th>员工ID：<input type="text" class="form-control"
+								placeholder="请输入6位员工ID" required autofocus name="empId"></th>
+							<th>部门： <input type="text" list="deptlist"
+								placeholder="---请选择部门---" name="depNum"> <datalist
+									id="deptlist">
+									<option th:each="departmentList:${departmentList}"
+										th:value="${departmentList.depNum}"
+										th:text="${departmentList.depName}"></option>
+								</datalist>
+							</th>
+							<th>职位： <input id="type" type="text" list="poslist"
+								placeholder="---请选择职位---" name="posNum"> <datalist
+									id="poslist">
+									<option th:each="positionList:${positionList}"
+										th:value="${positionList.posNum}"
+										th:text="${positionList.posName}"></option>
+								</datalist>
+							</th>
+							<th>姓名：<input type="text" class="form-control"
+								placeholder="姓名" required name="empName"></th>
+							<th>身份证号：<input type="text" class="form-control"
+								placeholder="身份证号" required name="cardId"></th>
+							<th>性别： <input id="type" type="text" list="sexlist"
+								placeholder="---请选择性别---" name="sex"> <datalist
+									id="sexlist">
+									<option value="男">男</option>
+									<option value="女">女</option>
+								</datalist>
+							</th>
+							<th>手机：<input type="text" class="form-control" required
+								name="mobileNum"></th>
+							<th>邮箱：<input type="email" class="form-control" required
+								name="emailAdr"></th>
+							<th>密码：<input type="password" class="form-control" required
+								name="passWd"></th>
+						</tr>
+					</thead>
+
+				</table>
+
+				<button type="submit" class="btn btn-lg btn-primary btn-block"
+					th:text="${empId!=null}?'修改':'添加'" onclick="return confirm('修改确认')"></button>
+				<button class="btn btn-lg btn-primary btn-block" type="reset">重置</button>
+
+				<div style="text-align: center">
+					<span th:text="${empExist}" th:if=${empExist}!=null class="alert"></span>
+				</div>
+				<div style="text-align: center">
+					<span th:text="${editEmp_infoLack}" th:if=${editEmp_infoLack}!=null
+						class="alert"></span>
+				</div>
+
+			</form>
+
+			<form action="/emp/updateEmp" method="post" th:if="${empId}!=null">
+
+				<table class="table table-hover" style="text-align: center">
+
+					<thead>
+						<tr th:each="emp:${emp}">
+							<th>员工ID：<input type="text" class="form-control" required
+								name="empId" readonly="readonly" th:value="${emp.empId}"></th>
+
+							<th>部门： <input type="text" list="deptlist"
+								placeholder="---请选择部门---" name="depNum" th:value="${emp.depNum}">
+								<datalist id="deptlist">
+									<option th:each="departmentList:${departmentList}"
+										th:value="${departmentList.depNum}"
+										th:text="${departmentList.depName}"></option>
+								</datalist>
+							</th>
+
+							<th>职位： <input type="text" list="poslist"
+								placeholder="---请选择职位---" name="posNum" th:value="${emp.posNum}">
+								<datalist id="poslist">
+									<option th:each="positionList:${positionList}"
+										th:value="${positionList.posNum}"
+										th:text="${positionList.posName}"></option>
+								</datalist>
+							</th>
+
+							<th>姓名：<input type="text" class="form-control" required
+								autofocus name="empName" th:value="${emp.empName}"></th>
+							<th>身份证号：<input type="text" class="form-control"
+								placeholder="身份证号" required name="cardId"
+								th:value="${emp.cardId}"></th>
+							<th>性别： <input type="text" list="sexlist"
+								placeholder="---请选择性别---" name="sex" th:value="${emp.sex}">
+								<datalist id="sexlist">
+									<option value="男">男</option>
+									<option value="女">女</option>
+								</datalist>
+							</th>
+							<th>手机号：<input type="text" class="form-control" required
+								name="mobileNum" th:value="${emp.mobileNum}"></th>
+							<th>邮箱：<input type="email" class="form-control" required
+								name="emailAdr" th:value="${emp.emailAdr}"></th>
+							<th>密码：<input type="password" class="form-control" required
+								name="passWd" th:value="${emp.passWd}"></th>
+						</tr>
+					</thead>
+
+				</table>
+
+				<button class="btn btn-lg btn-primary btn-block" type="submit"
+					onclick="return confirm('修改确认')">修改</button>
+				<button class="btn btn-lg btn-primary btn-block" type="reset">重置</button>
+
+				<div style="text-align: center">
+					<span th:text="${editEmp_infoLack}" th:if=${editEmp_infoLack}!=null
+						class="alert"></span>
+				</div>
+
+			</form>
+		</div>
+
+	</div>
+</body>
+</html>
